@@ -1,0 +1,43 @@
+
+I have been through the comments and have resolved the point which I wish
+to resolve myself. I have made no effort to improve typsetting issues.
+No doubt you will want to do this for the old American paper sizes, rather
+than the standard international paper sizes, so it would just be a waste
+of my time. Some unresolved issues:
+
+* I have changed all #defines to use capital letters. This is in keeping
+  with my own style rules, since these are globally defined. I have not
+  changed any other style matters.
+
+* I do not understand RMS's comments about char not being for single
+  characters. This is confusing to *me*, so I'm not sure how it could
+  be justified to a novice. What else is char for if not for characters?
+  Why waste a whole int storing a character? I have no idea what you are
+  thinking here.
+
+* Commenting out the images doesn't help. Need to use texinfo 3.12c
+
+* I don't know what long double means so I can't write about that.
+
+* I don't know how to do good tables in texinfo, so I ahve left
+  tables which need to be aligned in columns as @smallexample
+  so that they are readable. The person responsible for typesetting
+  the book will ahev to modify these anyway so that they fit/break
+  pages etc.
+
+I would appreciate it if the changes could be done in this order:
+
+ 1) Changes to the wording
+ 2) Addition of material on emacs (is this really a course in emacs?)
+
+  (send to me)
+
+ 3) Reformatting code and notes about GNU style
+    (please add note that I do not like the GNU/emacs layout. If I did, I would not
+     have formatted my code the way I do... I have included an emacs style
+     for my placement of curly braces--the only logically defensible approach,
+     of course ;-))
+
+You have my permission to cut up the text and do with it what you will, making
+me a co-author or whatever, in order to produce a GNU book which you feel
+happy with.
