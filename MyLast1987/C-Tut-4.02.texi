@@ -119,11 +119,11 @@ preserved on all copies.
 * Structures and Unions::       
 * Data structures::             
 * Recursion::                   
-* Example Programs chapter::    
+* Example Programs::    
 * Errors and debugging::        
 * Summary::                     
 * reserved words list::         
-* Comparisons ::                
+* Comparisons::                
 * Character Conversion Table::  
 * Emacs style file::            
 * Answers to questions::        
@@ -146,7 +146,7 @@ then you will not be disappointed. C is ideally suited to modern
 computers and modern programming.
 
 This book is a tutorial. Its aim is to teach C to a beginner, but with
-enough of the details so as not be outgrown as the years go by.  It
+enough of the details so as not to be outgrown as the years go by.  It
 presumes that you have some previous aquaintance with programming ---
 you need to know what a variable is and what a function is --- but you
 do not need much experience.  It is not essential to follow the order of
@@ -156,9 +156,9 @@ the same kinds of features: variables, ways of making loops, ways of
 making decisions, ways of accessing files etc. If you want to plan
 your assault on C, think about what you already know about programming
 and what you expect to look for in C. You will most likely find all of
-those things and more, as you work though the chapters.
+those things and more, as you work through the chapters.
 
-The examples programs range from quick one-function programs,
+The example programs range from quick one-function programs,
 which do no more than illustrate the sole use of one simple feature,
 to complete application examples occupying several pages. In places
 these examples make use of features before they have properly been
@@ -272,7 +272,7 @@ is unusual in several ways.  Before C, high level languages were
 criticized by machine code programmers because they shielded the user
 from the working details of the computer, with their black box approach,
 to such an extent that the languages become inflexible:  in other words,
-they did not not allow programmers to use all the facilities which the
+they did not allow programmers to use all the facilities which the
 machine has to offer.  C, on the other hand, was designed to give access
 to any level of the machine down to raw machine code and because of this
 it is perhaps the most flexible of all high level languages.
@@ -414,7 +414,7 @@ not exist.  With the GNU C compiler this stage is activated by the command
 @noindent
 To avoid the irritation of typing two or three separate commands (which
 are often cumbersome) you will normally find a simple interface
-for executing compiler. Traditionally this is an executable
+for executing the compiler. Traditionally this is an executable
 program called @code{cc} for C Compiler:
 
 @example
@@ -433,7 +433,7 @@ use the @code{-o} option for setting the name of the object code:
 @cindex a.out
 
 @example
-gcc -o @var{program-name} @var{filname}
+gcc -o @var{program-name} @var{filename}
 @end example
 
 @noindent
@@ -570,7 +570,7 @@ How is a C program compiled usually?
 Are upper and lower case equivalent in C?
 
 @item
-What the two different kinds of error which can be in a program? 
+What are the two different kinds of error which can be in a program? 
 
 @end enumerate
 
@@ -594,9 +594,9 @@ use @samp{default}, for example, as the name of a variable.  An attempt
 to do so will result in a compilation error.
 
 @xref{reserved words list, , All the Reserved Words}, for a complete list
-of the reserverd words.
+of the reserved words.
 
-Words used in included libaries are also, effectively, reserved. If you
+Words used in included libraries are also, effectively, reserved. If you
 use a word which has already been adopted in a library, there will be a
 conflict between your choice and the library.
 
@@ -634,7 +634,7 @@ superbly versatile way of printing text.  The simplest way to use it is
 to print out a literal string:
 
 @smallexample
-printf ("..some string...");
+printf ("... some string ...");
 @end smallexample
 
 @noindent
@@ -682,7 +682,7 @@ you can copy this to a file, compile and execute it.
    printf ("And makes a year %d you \n",4);
    printf ("The moon affects the sur %d heard \n",5);
    printf ("By law of phy%d great \n",6);
-   printf ("It %d when the the stars so bright \n",7);
+   printf ("It %d when the stars so bright \n",7);
    printf ("Do nightly scintill%d \n",8);
    printf ("If watchful providence be%d \n",9);
    printf ("With good intentions fraught \n");
@@ -706,7 +706,7 @@ And makes a year 4 you
 @group
 The moon affects the sur 5 heard
 By law of phy6d great
-It 7 when the the stars so bright
+It 7 when the stars so bright
 Do nightly scintill8
 If watchful providence be9
 With good intentions fraught
@@ -815,7 +815,7 @@ not really files, of course, they are `devices', (it is not possible to
 re-read what has been sent to the monitor", or write to the keyboard.),
 but devices are represented by files with special names, so that the
 keyboard is treated as a read-only file, the monitor as a write only
-file... The advantage of treating devices like this is that it is not
+file and so on. The advantage of treating devices like this is that it is not
 necessary to know how a particular device works, only that it exists
 somewhere, connected to the computer, and can be written to or read
 from. In other words, it is exactly the same to read or write from a
@@ -1128,7 +1128,7 @@ good programs. In the end, experience and good judgement are the factors
 which decide whether a program is written well or poorly written. The
 main goal of any style is to achieve @emph{clarity}.  Previously
 restrictions of memory size, power and of particular compilers often
-forced restrictions upon style, making programs clustered and
+forced restrictions upon style, making programs cluttered and
 difficult. All computers today are equipped with more than enough memory
 for their purposes, and have very good optimizers which can produce
 faster code than most programmers could write themselves without help,
@@ -1259,7 +1259,7 @@ chapters will then expand upon this as a kind of basic plan.
 /*                                                  */
 /****************************************************/
 
-#include <stdio.h>       /* Preprocessor defns */
+#include <stdio.h>       /* Preprocessor definitions */
 #include <myfile.c>
 
 #define SCREAM           "arghhhhh"
@@ -1281,7 +1281,7 @@ function2(a,b);
 function1 ()                        /* Purpose */
 
 @{
-....
+...
 @}
 
 /****************************************************/
@@ -1291,19 +1291,19 @@ function2 (a,b)                     /* Purpose */
 int a,b;
 
 @{
-....
+...
 @}
 
 @end smallexample
 
 @menu
-* Question 5::                  
+* Questions 6::                  
 @end menu
 Neither comments nor preprocessor commands have a special place in this
 list: they do not have to be in any one particular place within the
 program.
 
-@node Question 5,  , Form of a C program, Form of a C program
+@node Questions 6,  , Form of a C program, Form of a C program
 @section Questions
 
 @enumerate
@@ -1353,7 +1353,7 @@ characters:
 
 @smallexample
 
-/* ...... comment ......*/
+/* ... comment ... */
 
 @end smallexample
 
@@ -1368,7 +1368,7 @@ code which is the main message in a program.
 @menu
 * Example comment::             
 * Example comment 2::           
-* Question 7::                  
+* Questions 7::                  
 @end menu
 
 @node Example comment, Example comment 2, Comments, Comments
@@ -1427,7 +1427,7 @@ while (NOTFINISHED);
 @enumerate
 @item
 What happens if a comment is not ended? That is if the programmer
-types @samp{/*} .. to start but forgets the ..@samp{*/} to close?
+types @samp{/*} to start but forgets the @samp{*/} to close?
 @end enumerate
 
 @c **********************************************************************
@@ -1448,7 +1448,7 @@ particular task. Making functions is a way of isolating one block of
 code from other independent blocks of code.  Functions serve two
 purposes. They allow a programmer to say: `this piece of code does a
 specific job which stands by itself and should not be mixed up with
-anyting else', and they make a block of code @emph{reusable} since a
+anything else', and they make a block of code @emph{reusable} since a
 function can be reused in many different contexts without repeating
 parts of the program text.
 
@@ -1458,15 +1458,13 @@ written in the following form:
 
 @smallexample
 
-@var{identifier} (@var{parameter1},@var{parameter2},..)
+@var{identifier} (@var{parameter1}, @var{parameter2}, ...)
 
 @var{types of parameters}
 
 @{ @var{variable declarations}
 
-@var{statements}..
-......
-....
+@var{statements} ...
 
 @}
 @end smallexample
@@ -1500,7 +1498,7 @@ printf("The distance to your point was %f\n",d);
 @noindent
 You will probably see both styles in C programs.
 
-Each function has a name or identifier by which is used to refer to it
+Each function has a name or identifier which is used to refer to it
 in a program. A function can accept a number of @emph{parameters} or values
 which pass information from outside, and consists of a number
 of statements and declarations, enclosed by curly braces @code{@{ @}}, which
@@ -1517,11 +1515,11 @@ or the underscore @samp{_} character but the other characters in the
 name can be chosen from the following groups:
 
 @table @code
-@item a .. z  
+@item a-z  
 (any letter from a to z)
-@item A .. Z  
+@item A-Z  
 (any letter from A to Z)
-@item 0 .. 9  
+@item 0-9  
 (any digit from 0 to 9)
 @item  _       
 (the underscore character)
@@ -1533,7 +1531,7 @@ making a program easy to read.  Here is a real example function which adds
 together two integer numbers @code{a} and @code{b} and prints the result
 @code{c}. All the variables are chosen to be integers to keep things
 simple and the result is printed out using the print-formatted function
-printf, from the the standard library, with a @code{"%d"} to indicate that it
+printf, from the standard library, with a @code{"%d"} to indicate that it
 is printing a integer.
 
 @smallexample
@@ -1593,7 +1591,7 @@ together:
 * Breaking out early::          
 * The exit function::           
 * Functions and types::         
-* Questions 6::                 
+* Questions 8::                 
 @end menu
 
 @node Structure diagram, Program listing, Functions, Functions
@@ -1657,7 +1655,7 @@ DownOne ()                    /* Branch out! */
 printf ("Down here at level 1, all is well\n");
 
 DownLeft (2);
-printf ("Through level 1....\n");
+printf ("Through level 1 ...\n");
 DownRight (2);
 
 printf ("Going back up a level!\n");
@@ -1703,7 +1701,7 @@ place at which it was called. Take the following example:
 
 @smallexample
 
-bill = CalculateBill(data...);
+bill = CalculateBill(data ...);
 
 @end smallexample
 @noindent
@@ -1780,7 +1778,7 @@ used; on the other hand, a value which has not been returned cannot be
 used safely.
 @cindex Returning values
 
-@emph{NOTE : Functions do not have to return integers: you can decide whether
+@emph{Note: Functions do not have to return integers: you can decide whether
 they should return a different data type, or even no value at all. (See next chapter)}
 
 @node Breaking out early, The exit function, Functions with values, Functions
@@ -1844,7 +1842,7 @@ exit (CODE);
 This function also calls a number of other functions which perform
 tidy-up duties such as closing open files etc. 
 
-@node Functions and types, Questions 6, The exit function, Functions
+@node Functions and types, Questions 8, The exit function, Functions
 @section Functions and Types
 
 All the variables and values used up to now have been
@@ -1859,16 +1857,16 @@ bill = CalculateBill (a,b,c);
 @noindent
 can only make sense if the variable @code{bill} and the value of the
 function @code{CalculateBill()} are the same kind of object: in other
-words if @code{CalculatBill()} returns a floating point number, then
+words if @code{CalculateBill()} returns a floating point number, then
 @code{bill} cannot be a character! Both sides of an assignment must
 match.
 
 In fact this is done by declaring functions to return a particular
 type of data. So far no declarations have been needed because C assumes that
 all values are integers unless you specifically choose something
-different. Declarations are covered in the next section.
+different. Declarations are covered in the next chapter.
 
-@node Questions 6,  , Functions and types, Functions
+@node Questions 8,  , Functions and types, Functions
 @section Questions
 
 @enumerate
@@ -1906,18 +1904,18 @@ How can a function be made to quit early?
 
 @cindex Variables
 @cindex Variable names
-A variable is a seqeuence of program code with a name (also called its
+A variable is a sequence of program code with a name (also called its
 @emph{identifier}).  A name or identifier in C can be anything from a
 single letter to a word. The name of a variable must begin with an
 alphabetic letter or the underscore @samp{_} character but the other
 characters in the name can be chosen from the following groups:
 
 @table @code
-@item a .. z  
+@item a-z  
 (any letter from a to z)
-@item A .. Z  
+@item A-Z  
 (any letter from A to Z)
-@item 0 .. 9  
+@item 0-9  
 (any digit from 0 to 9)
 @item _       
 (the underscore character)
@@ -1927,12 +1925,12 @@ Some examples of valid variable names are:
 
 @smallexample
 
- a  total  Out_of_Memory  VAR  integer  etc...
+ a  total  Out_of_Memory  VAR  integer  ...
 
 @end smallexample
 
 In C variables do not only have names: they also have types.  The
-@emph{type} of a variable conveys to the the compiler what sort of data
+@emph{type} of a variable conveys to the compiler what sort of data
 will be stored in it. In BASIC and in some older, largely obsolete
 languages, like PL/1, a special naming convention is used to determine
 the sort of data which can be held in particular variables. e.g. the
@@ -2016,7 +2014,7 @@ by default, whereas on others they are not.
 * Types and The Cast Operator::  
 * Storage class register static and extern::  
 * Functions types::             
-* Questionsdeclare::            
+* Questions 9::            
 @end menu
 
 @node Declarations, Where to declare things, Variables, Variables
@@ -2028,7 +2026,7 @@ the @emph{type} followed by a list of variable @emph{names} which are
 to be treated as being that type:
 
 @smallexample
-  typename @var{variablename1},..,..,@var{variablenameN};
+  typename @var{variablename1}, ..., @var{variablenameN};
 
 @end smallexample
 @noindent
@@ -2062,7 +2060,7 @@ what these places are.
 One place is outside all of the functions. That is, in
 the space between function definitions.  (After the
 @code{#include} lines, for example.)  Variables declared
-here are called global variables.  There are also called
+here are called global variables.  They are also called
 static and external variables in special
 cases.)
 
@@ -2109,7 +2107,7 @@ or
 
  @{ int i;
 
- /* .... */
+ /* ... */
 
  while (i < 10)
     @{ char ch;
@@ -2167,12 +2165,12 @@ this is allowed.
 
 @menu
 * char::                        
-* Example special chars::       
+* Example special characters::       
 * integers::                    
 * Float::                       
 @end menu
 
-@node char, Example special chars, Types, Types
+@node char, Example special characters, Types, Types
 @subsection @code{char}
 
 A character type is a variable which can store a single ASCII
@@ -2238,7 +2236,7 @@ character @var{ddd} where ddd is an ASCII code
 @end table
 
 
-@node Example special chars, integers, char, Types
+@node Example special characters, integers, char, Types
 @subsection Listing
 
 @smallexample
@@ -2282,7 +2280,7 @@ unsigned char
 @noindent
 This admits ASCII values from 0 to 255, rather than -128 to 127.
 
-@node integers, Float, Example special chars, Types
+@node integers, Float, Example special characters, Types
 @subsection Integers
 
 @cindex Integers
@@ -2340,7 +2338,7 @@ There are also long and short floating point numbers in C.
 All the mathematical functions which C can use require
 @code{double} or @code{long float} arguments so it is common to use the type
 float for storage only of small floating point numbers and to use
-double elsewhere. (This not always true since the C `cast' operator
+double elsewhere. (This is not always true since the C `cast' operator
 allows temporary conversions to be made.) On a typical 32 bit
 implementation the different types would be organized as follows:
 
@@ -2398,7 +2396,7 @@ int i,j,k;
 
 @end smallexample
 @noindent
-to be integer type variables used for counting. (There is not particular
+to be integer type variables used for counting. (There is no particular
 reason why this should be; it is just common practice.) Other integer
 values should have more meaningful names.  Similarly names like:
 
@@ -2598,7 +2596,7 @@ placed in front of a variable then it can be referenced across files:
 @end smallexample
 @noindent
 In this example, the function @code{main()} in file 1 can use the
-variable @code{i} from the function main in file 2.
+variable @code{i} from the function@code{ main()} in file 2.
 
 @cindex Static variables
 Another class is called @code{static}. The name @code{static} is given to
@@ -2610,7 +2608,7 @@ unless the whole program is. NOTE: Every global variable, defined
 outside functions has the type static automatically. The opposite of
 static is @code{auto}.
 
-@node  Functions types, Questionsdeclare, Storage class register static and extern, Variables
+@node  Functions types, Questions 9, Storage class register static and extern, Variables
 @section Functions, Types and Declarations
 
 Functions do not always have to return values which are integers
@@ -2656,7 +2654,7 @@ A function which returns a character:
    is called too! The reasons for this are related to the
    way in which C is compiled. So, if the two functions
    above were called from @code{main()}, they would have to
-   declared in the variables section as:
+   be declared in the declaration section of that function:
 
 @smallexample
 
@@ -2679,7 +2677,7 @@ just @code{main()}.
 @end itemize
 
 
-@node Questionsdeclare,  , Functions types, Variables
+@node Questions 9,  , Functions types, Variables
 @section Questions
 
 @enumerate
@@ -2708,7 +2706,7 @@ Say which of the following are valid C identifiers:
 Write a statement to declare two integers called @code{i} and @code{j}.
 
 @item
-What is the difference between the types @code{floa} and @code{double}.
+What is the difference between the types @code{float} and @code{double}.
 
 @item
 What is the difference between the types @code{int} and @code{unsigned int}?
@@ -2791,7 +2789,7 @@ outside. Variable parameters are two-way.
 * Example 3::                   
 * Variable parameters::         
 * Example 4::                   
-* Qulakfj::                     
+* Questions 10::                     
 @end menu
 
 @node Declaring parameters, Value parameters, Parameters, Parameters
@@ -2801,7 +2799,7 @@ A function was defined by code which looks like this:
 
 @smallexample
 
-@var{identifier} (@var{parameters}...)
+@var{identifier} (@var{parameters} ...)
 
 @var{types of parameters}
 
@@ -2849,8 +2847,8 @@ Notice that they are declared outside the block braces.
 
 @cindex Value parameters
 A value parameter is the most common kind of parameter. All of
-the examples up to know have been examples of value parameters.
-When a value parameter is passes information to a function its
+the examples up to now have been examples of value parameters.
+When a value parameter is passed to a function its
 value is copied to a new place which is completely isolated from the
 place that the information came from. An example helps to show
 this. Consider a function which is called from @code{main()} whose purpose is
@@ -2934,7 +2932,7 @@ Now, any reference to @code{a} and @code{b} within the function
 the variables with the same names which appeared in @code{main()}. This means that if
 @code{a} and @code{b} are altered in @code{add()} they will not affect
 @code{a} and @code{b} in @code{main()}.  More advanced computing texts
-have names for the old and they new @code{a} and @code{b}:
+have names for the old and the new @code{a} and @code{b}:
 
 @table @emph
 @item Actual Parameters 
@@ -2986,7 +2984,7 @@ printf ("%d", i+j);
     would be copied to the value of @code{j} in @code{add()}.
 
 @item
-  The parameters ought to match by datatype when taken in an
+  The parameters ought to match by data type when taken in an
     ordered sequence. It is possible to
     copy a floating point number into a character formal
     parameter, causing yourself problems which are hard to
@@ -3138,7 +3136,7 @@ resultof (j)             /* Work out some result */
 int j;
 
 @{
-return (2*j + 3);        /* why not... */
+return (2*j + 3);       /* why not ... */
 @}
 
 @end smallexample
@@ -3269,14 +3267,14 @@ int *p,*q;
 @noindent
 To understand fully what is going on in this program requires a
 knowledge of pointers and operators, which are covered in later
-sections, but a brief explanation can be given here, so that the
+chapters, but a brief explanation can be given here, so that the
 method can be used.
 
 There are two new things to notice about this program: the
 symbols @samp{&} and @samp{*}.
 The ampersand @samp{&} symbol should be read as "the address of..".
 The star @samp{*} symbol should be read as "the contents of the
-address...". This is easily confused with the multiplication symbol
+address ...". This is easily confused with the multiplication symbol
 (which is identical). The difference is only in the context in which
 the symbol is used. Fortunately this is not ambiguous since
 multiplication always takes place between two numbers or variables,
@@ -3284,7 +3282,7 @@ whereas the "contents of a pointer" applies only to a single variable
 and the star precedes the variable name.
 
 So, in the program above, it is not the variables themselves which are
-being passed to the procedure but the addresses of the the variables. In
+being passed to the procedure but the addresses of  the variables. In
 other words, information about where the variables are stored in the
 memory is passed to the function @code{GetValues()}. These addresses are
 copied into two new variables @code{p} and @code{q}, which are said to
@@ -3312,7 +3310,7 @@ variable @code{i}, so this actually reads: make @code{i} equal to
 @end smallexample
 @noindent
 means make the contents of the address held in @code{q} equal to 20. Other
-operations are also possible (and these are detailed in the section on
+operations are also possible (and these are detailed in the chapter on
 pointers) such as finding out the value of @code{i} and putting it into a new
 variable, say, @code{a}:
 
@@ -3327,7 +3325,7 @@ a = *p;   /* is equivalent to a = i */
 Notice that the * symbol is required in the declaration of these
 parameters.
 
-@node Example 4, Qulakfj, Variable parameters, Parameters
+@node Example 4, Questions 10, Variable parameters, Parameters
 @section Example Listing
 
 @smallexample
@@ -3372,7 +3370,7 @@ int wscale = 1;
 
 @end smallexample
 
-@node Qulakfj,  , Example 4, Parameters
+@node Questions 10,  , Example 4, Parameters
 @section Questions
 
 @enumerate
@@ -3526,10 +3524,10 @@ If functions were sealed capsules and no local variables could
 ever communicate with other parts of the program, then functions would
 not be very useful. This is why parameters are allowed. Parameters are
 a way of handing local variables to other functions without letting
-them out! Value parameters (see last section) make copies of local
+them out! Value parameters (see previous chapter) make copies of local
 variables without actually using them. The copied parameter is then a
 local variable in another function. In other words, it can't get out
-of the function to which is it passed ... unless it is passed on as
+of the function to which it is passed ... unless it is passed on as
 another parameter.
 
 @node Example 5, Style note, Parameters again, Scope
@@ -3546,7 +3544,7 @@ stack.)
 
 /***************************************************************/
 /*                                                             */
-/* SCOPE : THE CLLLED CAPSULES                                 */
+/* SCOPE : THE SEALED CAPSULES                                 */
 /*                                                             */
 /***************************************************************/
 
@@ -3591,13 +3589,13 @@ is being passed to a function unless all that information is passed as
 parameters. Sometimes global variables are very useful however, and this
 problem need not be crippling. A way to make this clear is to write
 global variables in capital letters only, while writing the rest of the
-variables in mainly small letters..
+variables in mainly small letters ...
 
 @smallexample
 
 int GLOBALINTEGER;
 
-....
+...
 
 @{ int local integer;
 
@@ -3682,11 +3680,11 @@ letting the variables leak out into other functions?
 
 @item
 Write a program which declares 4 variables. Two integer variables
-called @code{number_of_hats},@code{counter} which are GLOBAL and two @code{float} variables
-called @code{x_coord},@code{y_coord} which are LOCAL inside the function
+called @code{i} and @code{j} which are GLOBAL and two @code{float} variables
+called @code{x} and @code{y} which are LOCAL inside the function
 @code{main()}. Then add another function called @code{another()} and pass
-@code{x_coord},@code{y_coord} to this function. How many different storage spaces
-are used when this program runs? (Hint: are @code{x_coord},@code{y_coord} and their
+@code{x} and @code{y} to this function. How many different storage spaces
+are used when this program runs? (Hint: are @code{x} and @code{y} and their
 copies the same?)
 
 @end enumerate
@@ -3722,7 +3720,7 @@ standard header file @file{stdio.h}.
 @end smallexample 
 @noindent 
 is a command which tells the preprocessor
-to treat the file @file{stdio.h} as if it were the actually part of the
+to treat the file @file{stdio.h} as if it were actually part of the
 program text, in other words to include it as part of the program to
 be compiled.
 
@@ -3783,7 +3781,7 @@ would allow @code{SUM} to be used instead of @code{1+2+3+4}. Or
 
 @smallexample
 
-#define STRING "Mary had a little lamb..."
+#define STRING "Mary had a little lamb ..."
 
 @end smallexample
 @noindent
@@ -3855,9 +3853,9 @@ operator which belongs to C:
 
 @end smallexample
 @noindent
-This is like a compact way of writing an @samp{if..then..else}
+This is like a compact way of writing an @samp{if ... then ... else}
 statement, ideal for macros. But it is also slightly different: it is
-an expression which returns a value, where as an @samp{if..then..else}
+an expression which returns a value, where as an @samp{if ... then ... else}
 is a statement with no value.
 Firstly the test is made. If the test is
 true then the first statement is carried out, otherwise the second is
@@ -4034,7 +4032,7 @@ This is a part of the proposed ANSI standard.
 #if (CHOICE == 1)
 
 #define OPTIONSTRING "The programmer selected this"
-#define DITTO        "instead of ....             "
+#define DITTO        "instead of ... "
 
 #else
 
@@ -4077,7 +4075,7 @@ Define a macro called "birthday" which describes the day of the
 month upon which your birthday falls.
 
 @item
-Write an instruction to the preprocessor to include to maths
+Write an instruction to the preprocessor to include the maths
 library @file{math.h}.
 
 @item
@@ -4106,7 +4104,7 @@ unknown location. How will you find it? You need a pointer!
 
 @cindex Address of variables
 @cindex @samp{&} operator
-A pointers is a special type of variable which holds the address or
+A pointer is a special type of variable which holds the address or
 location of another variable. Pointers point to these locations by
 keeping a record of the spot at which they were stored.  Pointers to
 variables are found by recording the address at which a variable is
@@ -4193,15 +4191,15 @@ read in a program to have the following meanings:
 
 @table @code
 @item &
-The address of...
+The address of ...
 @item * 
-The contents of the address held in...
+The contents of the address held in ...
 @end table
 @noindent
 Another way of saying the second of these is:
 @table @samp
 @item *
-The contents of the location pointed to by...
+The contents of the location pointed to by ...
 @end table
 @noindent
 This reinforces the idea that pointers reach out an imaginary hand and
@@ -4377,7 +4375,7 @@ will contain garbage (random numbers), because no statement like
 @noindent
 has yet been encountered which would give it a value. It will then
 attempt to fill the contents of some variable, pointed to by @code{a}, with
-the value 2. This is doomed to faliure. a only contains garbage so the
+the value 2. This is doomed to failure. a only contains garbage so the
 2 could be stored anywhere. There may not even be a variable at the
 place in the memory which a points to. Nothing has been said about
 that yet. This kind of initialization cannot possibly work and will
@@ -4480,7 +4478,7 @@ Structures and Unions.
 @section Pointers to functions
 
 @sp 1
-@emph{This section is somewhat outside of the main development of the book. You might want
+@emph{This section is somewhat outside the main development of the book. You might want
 to omit it on first reading.}
 @sp 1
 
@@ -4674,7 +4672,7 @@ important thing that a program can do. Without input and output
 computers would be quite useless.
 
 C treats all its output as though it were reading or writing to
-different files. A file is really just an abtraction: a place
+different files. A file is really just an abstraction: a place
 where information comes from or can be sent to. Some files can only be
 read, some can only be written to, others can be both read from and
 written to. In other situations files are called I/O streams.
@@ -4696,7 +4694,7 @@ because the situation can be altered. In fact what happens is that
 these files are just handed over to the local operating system to deal
 with and it chooses what to do with them. Usually this means the
 keyboard and the screen, but it can also be redirected to
-a printer or to a disk file or to a modem etc.. depending upon how the
+a printer or to a disk file or to a modem etc depending upon how the
 user ran the program.
 
 @cindex Keyboard input
@@ -4712,12 +4710,12 @@ importance, they are:
 
 @smallexample
 
- printf ()
- scanf  ()
+ printf()
+ scanf()
  getchar()
  putchar()
- gets   ()
- puts   ()
+ gets()
+ puts()
 
 @end smallexample
 
@@ -4729,7 +4727,7 @@ importance, they are:
 * Example 10::                  
 * Output 10::                   
 * Special Control Characters again::  
-* Questions 15::                
+* Questions 14a::                
 * scanf::                       
 * Conversion characters::       
 * How does scanf see the input::  
@@ -4740,9 +4738,9 @@ importance, they are:
 * Matching without assigning::  
 * Formal Definition of scanf::  
 * Summary of points about scanf::  
-* Questions 15b::               
+* Questions 14b::               
 * Low Level Input/Output::      
-* Questions 15c::               
+* Questions 14c::               
 @end menu
 
 @node printf again, Example 9, Standard Output and Standard Input, Standard Output and Standard Input
@@ -4756,12 +4754,12 @@ because it gives the user control over how text and numerical data are
 to be laid out on the screen.
 Making text look good on screen is important in programming. C
 makes this easy by allowing you to decide how the text will
-be printed in the available space. The @code{printf} function has general
+be printed in the available space. The @code{printf} function has the general
 form:
 
 @smallexample
 
-printf ("string...",@var{variables},@var{numbers})
+printf ("string ...",@var{variables},@var{numbers})
 
 @end smallexample
 @noindent
@@ -4783,8 +4781,8 @@ blank fields to be filled:
 
 @smallexample
 
- printf ("A pretty ordinary string..");
- printf ("Testing 1,2,3...");
+ printf ("A pretty ordinary string ...");
+ printf ("Testing 1, 2, 3, ...");
 
 @end smallexample
 
@@ -4825,7 +4823,7 @@ can be printed out with @code{printf}. @code{%d} is called a conversion
 character for integers because it tells the compiler to treat the
 variable to be filled into it as an integer. So it better had be an
 integer or things will go wrong! Other characters are used for other
-kinds of data. Here is a list if the different letters for
+kinds of data. Here is a list of the different letters for
 @code{printf}.
 
 @table @code
@@ -4935,7 +4933,7 @@ information. That extra information takes the form:
 @end smallexample
 
 @noindent
-where the each bracket is used to denote that the item is optional 
+where the brackets are used to denote that the item is optional 
 and the symbols inside them stand
 for the following.
 
@@ -4951,7 +4949,7 @@ This is a number which specifies the field width of
      field will be filled out with spaces.
 
 @item [-]  
-If this included the output will be left justified.
+If this is included the output will be left justified.
      This means it will be aligned with the left hand 
      margin of the field created with
 @code{[@var{fwidth}]}. Normally all
@@ -4976,7 +4974,7 @@ Some valid format specifiers are written below here.
 @end smallexample
 @noindent
 The table below helps to show the effect of changing these format
-controls. The width of a field is draw in by using the @code{|} bars.
+controls. The width of a field is drawn using the @code{|} bars.
 
 @smallexample
 @emph{Object to                Control Spec.       Actual Output}
@@ -5059,7 +5057,7 @@ for (i = 1; i <= 10; i++)
 
 @end smallexample
 
-@node Special Control Characters again, Questions 15, Output 10, Standard Output and Standard Input
+@node Special Control Characters again, Questions 14a, Output 10, Standard Output and Standard Input
 @section Special Control Characters
 
 Control characters are invisible on the screen. They have special
@@ -5096,7 +5094,7 @@ other character. These characters are listed below.
 
 @end table
 
-@node Questions 15, scanf, Special Control Characters again, Standard Output and Standard Input
+@node Questions 14a, scanf, Special Control Characters again, Standard Output and Standard Input
 @section Questions
 
 @enumerate
@@ -5127,7 +5125,7 @@ Hint: if you don't know, try them in a program!
 
 @end enumerate
 
-@node scanf, Conversion characters, Questions 15, Standard Output and Standard Input
+@node scanf, Conversion characters, Questions 14a, Standard Output and Standard Input
 @section @code{scanf}
 
 @code{scanf} is the input function which gets formatted input from the
@@ -5141,7 +5139,7 @@ quite a difference to the way that scanf works. The actual mechanics
 of @code{scanf} are very similar to those of printf in reverse
 @smallexample
 
-scanf ("string...",pointers);
+scanf ("string ...",pointers);
 
 @end smallexample
 @noindent
@@ -5216,7 +5214,7 @@ character string
 @noindent
 The difference between short integer and long integer can make or
 break a program. If it is found that a program's input seems to be
-behaving strangely, check these carefully. (See the section on Errors
+behaving strangely, check these carefully. (See the chapter on Errors
 and Debugging for more about this.)
 
 @node How does scanf see the input, First account of scanf, Conversion characters, Standard Output and Standard Input
@@ -5228,7 +5226,7 @@ in at the keyboard. Keyboard input is usually buffered. This means
 that the characters are held in a kind of waiting bay in the memory
 until they are read. The buffer can be thought of as a part of the
 input file stdin, holding some characters which can be scanned
-though. If the buffer has some characters in it, @code{scanf} will start to
+through. If the buffer has some characters in it, @code{scanf} will start to
 look through these; if not, it will wait for some characters to be put
 into the buffer.
 
@@ -5246,7 +5244,7 @@ below:
 @smallexample
 
  --------------------------------------
-| some...chars.738/.              |'\n'|
+| some...characters.738/.         |'\n'|
  --------------------------------------
 
 @end smallexample
@@ -5265,7 +5263,7 @@ character will do!
 @node First account of scanf, The dangerous function, How does scanf see the input, Standard Output and Standard Input
 @section First account of scanf
 
-Consider the example which was give above.
+Consider the example which was given above.
 
 @smallexample
 
@@ -5322,7 +5320,7 @@ program was meant to read data from the input and couldn't, it leaves
 a mess for something else to trip over.
 @code{scanf} can get out of step with its input if the user types
 something even slightly out of line.  It should be used with
-caution...
+caution ...
 
 @node Keeping scanf under control, Example 11, The dangerous function, Standard Output and Standard Input
 @section Keeping scanf under control
@@ -5365,7 +5363,7 @@ while (inputisnonsense)
 
 @{
 printf ("Get your act together out there!!\n");
-scanf (..)
+scanf (...)
 skipgarb();
 @}
 
@@ -5479,7 +5477,7 @@ main ()
 
 scanf ("%d %c %f", &i,&ch,&x);
 scanf ("%c %c", &ch2,&ch3);
-printf ("%d %c %f\n %c %c");
+printf ("%d %c %f\n %c %c",i,ch,x,ch2,ch3);
 @}
 
 @end smallexample
@@ -5633,7 +5631,7 @@ In this last case @code{scanf} aborted before matching anything.
 The general form of the @code{scanf} function is:
 @smallexample
 
-     n = scanf ("string...", pointers);
+     n = scanf ("string ...", pointers);
 
 @end smallexample
 The value @code{n} returned is the number of items matched or the end of
@@ -5653,7 +5651,7 @@ the optional assignment suppression character.
 this is a number giving the maximum field width to be
       accepted by scanf for a particular item. That is, the
       maximum number of characters which are to be thought
-      of as being part of one the current variable value.
+      of as being part of the current variable value.
 @item X 
 is one of the characters listed above.
 @end table
@@ -5685,7 +5683,7 @@ array one would write:
 
 @end smallexample
 
-@node Summary of points about scanf, Questions 15b, Formal Definition of scanf, Standard Output and Standard Input
+@node Summary of points about scanf, Questions 14b, Formal Definition of scanf, Standard Output and Standard Input
 @section Summary of points about scanf
 
 @itemize @bullet
@@ -5707,11 +5705,9 @@ array one would write:
 @item    White space characters are ignored for all conversion
      characters except @code{%c}. Only a @code{%c} type can contain a
      white space character.
-
-@item    White space characters in 
 @end itemize
 
-@node Questions 15b, Low Level Input/Output, Summary of points about scanf, Standard Output and Standard Input
+@node Questions 14b, Low Level Input/Output, Summary of points about scanf, Standard Output and Standard Input
 @section Questions
 
 @enumerate
@@ -5736,7 +5732,7 @@ replaces them with a single newline character.
 @end enumerate
 
 
-@node Low Level Input/Output, Questions 15c, Questions 15b, Standard Output and Standard Input
+@node Low Level Input/Output, Questions 14c, Questions 14b, Standard Output and Standard Input
 @section Low Level Input/Output
 
 @menu
@@ -5881,7 +5877,7 @@ puts(string);
 @noindent
 More information about these is given later, @xref{Strings}.
 
-@node Questions 15c,  , Low Level Input/Output, Standard Output and Standard Input
+@node Questions 14c,  , Low Level Input/Output, Standard Output and Standard Input
 @section Questions
 
 @enumerate
@@ -5923,7 +5919,7 @@ them. The terminology of operators is the following:
 
 @table @emph
 @item operator
-Something which operates on someting.
+Something which operates on something.
 
 @item operand
 Each thing which is operated upon by an
@@ -5953,7 +5949,7 @@ operands. These rough groupings are thought of as follows:
    give a new number.
 
 @item  Operators which make comparisons. e.g. less than,
-   equal to, greater than...
+   equal to, greater than ...
 
 @item  Operators which produce new variable types: like the
    cast operator.
@@ -5983,7 +5979,7 @@ abstruse operators are looked at in another chapter.
 * The Cast Operator::           
 * Expressions and Types::       
 * Summary of Operators and Precedence::  
-* Questions 16::                
+* Questions 15::                
 @end menu
 
 @node  Expressions and values, Example 12, Assignments Expressions and Operators, Assignments Expressions and Operators
@@ -6170,7 +6166,7 @@ By using parentheses, any doubt about what the expression means is
 removed. Parentheses are said to have a higher priority than + * or /
 because they are evaluated as "sealed capsules" before other operators
 can act on them. Putting parentheses in may remove the ambiguity of
-expressions, but it does not alter than fact that
+expressions, but it does not alter the fact that
 @smallexample
 
     a + b / 4 * 2
@@ -6185,8 +6181,7 @@ will always be evaluated first. Otherwise, expressions like the one
 above are evaluated from left to right: so an expression will be dealt
 with from left to right unless a strong operator overrides this
 rule. Use parentheses to be sure.
-A table of all operators and their priorities is given in the
-reference section.
+A table of all operators and their priorities is given later.
 
 @node Unary Operator Precedence, Special Assignment Operators @code{++} @code{--}, Parentheses and Priority, Assignments Expressions and Operators
 @section Unary Operator Precedence
@@ -6607,19 +6602,19 @@ translates to:
 @end smallexample
 @noindent
 Shakespeare might have been disappointed to learn that, whatever the
-value of a variable @code{tobe} the result of
+value of a variable @code{to_be} the result of
 @smallexample
 
-  thequestion = tobe || !tobe
+  the_question = to_be || !to_be
 
 @end smallexample
 @noindent
 must always be true. The NOT operator always creates the logical
-opposite: @code{!true} is false and @code{!false} is true. On or the
-other of these must be true. @code{thequestion} is therefore always
+opposite: @code{!true} is false and @code{!false} is true. One or the
+other of these must be true. @code{the_question} is therefore always
 true. Fortunately this is not a matter of life or death!
 
-@node Summary of Operators and Precedence, Questions 16, Expressions and Types, Assignments Expressions and Operators
+@node Summary of Operators and Precedence, Questions 15, Expressions and Types, Assignments Expressions and Operators
 @section Summary of Operators and Precedence
 
 The highest priority operators are listed first.
@@ -6678,7 +6673,7 @@ The highest priority operators are listed first.
 
 @end smallexample
 
-@node Questions 16,  , Summary of Operators and Precedence, Assignments Expressions and Operators
+@node Questions 15,  , Summary of Operators and Precedence, Assignments Expressions and Operators
 @section Questions
 
 @enumerate
@@ -6694,9 +6689,6 @@ Write a short statement which assigns the remainder of 5 divided by 2 to a varia
 
 @item
 Write a statement which subtracts -5 from 10.
-
-@item
-Write in C: if 1 is not equal to 23, print out "Thank goodness  for mathematics!"
 
 @end enumerate
 
@@ -6795,7 +6787,7 @@ similar to 2a.
          case first_possibility : /* do something */
          case second_possibility : /* do something */
 
-         ....
+         ...
          @}
 
 @end smallexample
@@ -6806,10 +6798,10 @@ similar to 2a.
 * if else::                     
 * Nested ifs and logic::        
 * Example 14::                  
-* Stringing together if..else::  
+* Stringing together if ... else::  
 * switch::                      
 * Example 15::                  
-* To try::                      
+* Questions 16::                      
 @end menu
 
 @node if, example f1, Decisions, Decisions
@@ -6912,7 +6904,7 @@ traveller whether to take the left fork or the right fork of his road,
 for instance, it could only tell him whether to get up and go at
 all. To do much more for programs it needs to be extended. This is the
 purpose of the @code{else} statement, described after some example
-listings..
+listings.
 
 @node example f1, if else, if, Decisions
 @section Example Listings
@@ -6921,7 +6913,7 @@ listings..
 
 /*****************************************/
 /*                                       */
-/* If... #1                              */
+/* If ... #1                              */
 /*                                       */
 /*****************************************/
 
@@ -7035,7 +7027,7 @@ if (fuel > 30)        /* Tank holds 40 l */
 @node if else, Nested ifs and logic, example f1, Decisions
 @section @code{if} ... @code{else}
 
-The @samp{if .. else} statement has the form:
+The @samp{if ... else} statement has the form:
 @smallexample
 
 if (@var{condition}) @var{statement1}; else @var{statement2};
@@ -7056,11 +7048,11 @@ else
 
 @end smallexample 
 @noindent 
-The @samp{if..else} statement is a two way
+The @samp{if ... else} statement is a two way
 branch: it means do one thing or the other. When it is executed, the
 condition is evaluated and if it has the value `true' (i.e. not zero)
 then @var{statement1} is executed. If the condition is `false' (or
-zero) then @var{statement2} is executed. The @samp{if..else}
+zero) then @var{statement2} is executed. The @samp{if ... else}
 construction often saves an unnecessary test from having to be
 made. For instance:
 @smallexample
@@ -7081,7 +7073,7 @@ else
 @end smallexample
 @noindent
 It is not necessary to test whether @code{i} was negative in the second
-block because it was implied by the @samp{if..else} structure. That is,
+block because it was implied by the @samp{if ... else} structure. That is,
 that block would not have been executed unless @code{i} were NOT greater
 than zero.  The weary traveller above might make a decision such as:
 @smallexample
@@ -7125,7 +7117,7 @@ if (i > 2)
 @end smallexample
 @noindent
 Both of these test @code{i} for the same information, but they do it in
-different ways. The first method might been born out of the following
+different ways. The first method might have been born out of the following
 sequence of thought:
 
 @image{img/17.2,12cm}
@@ -7153,11 +7145,11 @@ than 4 at the same time: it is 3. So @code{i} is 3.
 
 The aim of this demonstration is to show that there are two ways
 of making multiple decisions in C. Using the logical comparison
-operators @code{&&}, @code{||} (AND,OR) and so on.. several multiple
+operators @code{&&} (AND) @code{||} (OR) several multiple
 tests can be made. In many cases though it is too difficult to think
 in terms of these operators and the sealed capsule idea begins to look
 attractive. This is another advantage of using the curly braces: it
-helps the programmer to see that if statements and @samp{if..else} statements
+helps the programmer to see that if statements and @samp{if ... else} statements
 are made up of sealed capsule parts. Once inside a sealed capsule
 @smallexample
 
@@ -7175,14 +7167,14 @@ else
 the programmer can rest assured that nothing illegal can get in. The
 block braces are like regions of grace: they cannot be penetrated by
 anything which does not satisfy the right conditions. This is an
-enourmous weight off the mind! The programmer can sit back and think:
+enormous weight off the mind! The programmer can sit back and think:
 I have accepted that i is greater than 2 inside these braces, so I can
 stop worrying about that now. This is how programmers learn to think
 in a structured way. They learn to be satisfied that certain things
 have already been proven and thus save themselves from the onset of
 madness as the ideas become too complex to think of all in one go.
 
-@node Example 14, Stringing together if..else, Nested ifs and logic, Decisions
+@node Example 14, Stringing together if ... else, Nested ifs and logic, Decisions
 @section Example Listing
 
 @smallexample
@@ -7209,7 +7201,7 @@ printf ("Please enter your personal number :");
 
 usernum = getnumber();
 
-if (usernum == 7462)
+if (usernum == persnum)
    @{
    printf ("\nThe current state of your account\n");
    printf ("is %d\n",balance);
@@ -7245,12 +7237,11 @@ return (num);
 
 @end smallexample
 
-@node Stringing together if..else, switch, Example 14, Decisions
-@section Stringing together if..else
+@node Stringing together if ... else, switch, Example 14, Decisions
+@section Stringing together if ... else
 
 What is the difference between the following programs? They both
-interpret some imaginary exam result in the same way. They both look
-identical when compiled and run. Why then are they different?
+interpret some imaginary exam result in the same way. They appear to give identical results when run. Why then are they different?
 
 @smallexample
 
@@ -7272,7 +7263,7 @@ if (result < 10)
    printf ("That is poor");
    @}
 
-if (result > 20)
+if (result > 20 && result <= 70)
    @{
    printf ("You have passed.");
    @}
@@ -7310,7 +7301,7 @@ if (result < 10)
 else 
 
    @{
-   if (result > 20)
+   if (result > 20 && result <= 70)
       @{
       printf ("You have passed.");
       @}
@@ -7329,8 +7320,8 @@ else
 @end smallexample
 
 The answer is that the second of these programs can be more efficient.
-This because it uses the @code{else} form of the @code{if} statement
-which in turn means that few things have to be calculated. Program one
+This is because it uses the @code{else} form of the @code{if} statement
+which in turn means that fewer things have to be calculated. Program one
 makes every single test, because the program meets every if statement,
 one after the other. The second program does not necessarily do this
 however. The nested @code{if} statements make sure that the second two
@@ -7338,16 +7329,16 @@ tests are only made if the first one failed. Similarly the third test is
 only performed if the first two failed. So the second program could end
 up doing a third of the work of the first program, in the best possible
 case. Nesting decisions like this can be an efficient way of controlling
-long lists of decisions like those above. Nested loops make a program
+long lists of decisions like those above. Nested decisions make a program
 branch into lots of possible paths, but choosing one path would preclude
 others.
 
-@node switch, Example 15, Stringing together if..else, Decisions
+@node switch, Example 15, Stringing together if ... else, Decisions
 @section @code{switch}: integers and characters
 
 The @code{switch} construction is another way of making a program path
 branch into lots of different limbs. It can be used as a different way
-of writing a string of @samp{if .. else} statements, but it is more versatile
+of writing a string of @samp{if ... else} statements, but it is more versatile
 than that and it only works for integers and character type values. It
 works like a kind of multi-way switch. (See the diagram.) The switch
 statement has the following form:
@@ -7384,7 +7375,7 @@ switch (@var{integer value})
    case 2:  @var{statement2};
             break;                /* optional line */
 
-   ....
+   ...
 
    default: @var{default statement}
             break;                 /* optional line */
@@ -7405,14 +7396,14 @@ follow the @code{default} case are executed for all cases which are not
 specifically listed.  @code{switch} is a way of choosing some action
 from a number of known instances. Look at the following example.
 
-@node Example 15, To try, switch, Decisions
+@node Example 15, Questions 16, switch, Decisions
 @section Example Listing
 
 @smallexample
 
 /************************************************/
 /*                                              */
-/* switch  .. case                              */
+/* switch ... case                              */
 /*                                              */
 /************************************************/
 
@@ -7429,13 +7420,13 @@ main ()
 
 @{ short digit;
 
-printf ("Enter any digit in the range 0..9");
+printf ("Enter any digit in the range 0 to 9");
 
 scanf ("%h",&digit);
 
 if ((digit < 0) || (digit > 9))
    @{
-   printf ("Number was not in range 0..9");
+   printf ("Number was not in range 0 to 9");
    return (CODE);
    @}
 
@@ -7480,14 +7471,15 @@ The program selects one of the printf statements using a switch
 construction. At every @code{case} in the switch, a @code{break}
 statement is used. This causes control to jump straight out of the
 switch statement to its closing brace @code{@}}. If break were not
-included it would go right on executing the statements to the end,
-testing the cases in turn. break this gives a way of jumping out of a
-switch quickly.
+included it would go right on executing the statements to the end. break gives a way of jumping out of a switch quickly.
 
 There might be cases where it is not necessary or not desirable to jump
 out of the switch immediately. Think of a function @code{yes()} which
 gets a character from the user and tests whether it was 'y' or 'Y'.
 @smallexample
+
+#define TRUE  1
+#define FALSE 0
 
 yes ()         /* A sloppy but simple function */
 
@@ -7510,21 +7502,16 @@ breaks out of the whole function, so in this case break was not
 required. The default option ensures that whatever else the character
 is, the function returns false.
 
-@node To try,  , Example 15, Decisions
-@section Things to try
+@node Questions 16,  , Example 15, Decisions
+@section Questions
 
 @enumerate
 
 @item
-Write a program to get a lot of numbers from the user and print
-out the maximum and minimum of those.
-
-@item
-Try to make a counter which is reset to zero when it reaches 9999.
-
+Write in C: if 1 is not equal to 23, print out "Thank goodness  for mathematics!"
 @item
 Try to write a program incorporating the statement @code{if
-(yes()) @{...@}}.
+(yes()) @{ ... @}}.
 
 @end enumerate
 
@@ -7571,7 +7558,7 @@ programmers and can be used in some surprising ways!
 * The flexible for loop::       
 * Quitting Loops and Hurrying Them Up!::  
 * Nested Loops::                
-* Questions 18::                
+* Questions 17::                
 @end menu
 
 @node while, Example 16, Loops, Loops
@@ -7598,7 +7585,7 @@ is worthwhile explaining the steps which take place in a while loop.
 @image{img/18.1,12cm}
 
 The first important thing about this loop is that has a
-conditional expression (something like @code{(a > b)} etc...) which is
+conditional expression (something like @code{(a > b)} etc). which is
 evaluated every time the loop is executed by the computer. If the
 value of the expression is true, then it will carry on with the
 instructions in the curly braces. If the expression evaluates to
@@ -7634,7 +7621,7 @@ and through. It is one instance in which the programmer has to start
 thinking C and not any other language. Something which is immediately
 obvious from listing is that the while loop in @code{skipgarb()} is empty: it
 contains no statements. This is quite valid: the loop will merely do
-nothing a certain number of times... at least it would do nothing if
+nothing a certain number of times ... at least it would do nothing if
 it were not for the assignment in the conditional expression! It could
 also be written:
 @smallexample
@@ -7796,11 +7783,11 @@ printf ("Number of space = %d\n",count);
 @end smallexample
 
 @node do while, Example 18, Example 17, Loops
-@section @code{do}..@code{while}
+@section @code{do} ... @code{while}
 
 @cindex do while
-The @code{do}..@code{while} 
-loop resembles most closely the repeat..until loops
+The @code{do} ... @code{while} 
+loop resembles most closely the repeat ... until loops
 of Pascal and BASIC except that it is the `logical opposite'. The
 do loop has the form:
 @smallexample
@@ -7815,11 +7802,11 @@ while (@var{condition})
 @end smallexample
 @noindent
 Notice that the condition is at the end of this loop. This means that a
-@code{do..while} loop will always be executed at least once, before the
+@code{do ... while} loop will always be executed at least once, before the
 test is made to determine whether it should continue. This is the only
-difference between @code{while} and @code{do..while}.
+difference between @code{while} and @code{do ... while}.
 
-A @code{do..while} loop is like the "repeat .. until" of other languages
+A @code{do ... while} loop is like the "repeat ... until" of other languages
 in the following sense: if the condition is NOTed using the @samp{!}
 operator, then the two are identical.
 @smallexample
@@ -7841,21 +7828,21 @@ think in C!
 @node Example 18, for, do while, Loops
 @section Example Listing
 
-Here is an example of the use of a @code{do..while} loop. This program
+Here is an example of the use of a @code{do ... while} loop. This program
 gets a line of input from the user and checks whether it contains a
 string marked out with @code{""} quote marks. If a string is found, the
 program prints out the contents of the string only. A typical input line
 might be:
 @smallexample
 
-    @var{Onceupon a time "Here we go round the..."what a terrible..}
+    @var{Once upon a time "Here we go round the ... "what a terrible ...}
 
 @end smallexample
 @noindent
 The output would then be:
 @smallexample
 
-@var{Here we go round the...}
+@var{Here we go round the ...}
 
 @end smallexample
 @noindent
@@ -7866,7 +7853,7 @@ If the string has only one quote mark then the error message
 
 /**********************************************/
 /*                                            */
-/* do .. while demo                           */
+/* do ... while demo                          */
 /*                                            */
 /**********************************************/
 
@@ -7941,7 +7928,7 @@ loop:
 @itemize -
 For all values of @var{variable} from @var{value1} to
  @var{value2} in steps of @code{value3}, repeat the
- following sequence of commands....
+ following sequence of commands ...
 
 @end itemize
 @noindent
@@ -8031,10 +8018,10 @@ for (i = 0; i <= n; i++)
 It generally finds itself useful in applications where a single
 variable has to be controlled in a well determined way.
 
-@noindent g4
+@noindent
 @section Example Listing
 
-This example program prints out all the primes numbers between 1
+This example program prints out all the prime numbers between 1
 and the macro value @code{maxint}. Prime numbers are numbers which cannot
 be divided by any number except 1 without leaving a remainder.
 
@@ -8128,7 +8115,7 @@ loop:
 
 for (x = 2; x <= 1000; x = x * x)
    @{
-     ....
+     ...
    @}
 
 @end smallexample
@@ -8163,12 +8150,12 @@ like to be executed on every pass of the loop. Why not put that
 statement in the curly braces? In most cases that would be the best
 thing to do, but in special instances it might keep a program tidier or
 more readable to put it in a for loop instead. There is no good rule for
-when to do this, except to say: make you code as clear as possible.
+when to do this, except to say: make your code as clear as possible.
 
 It is not only the statements which are flexible. An unnerving
 feature of the for construction (according to some programmers) is
 that even the conditional expression in the for loop can be altered by
-the program from within the loop itself if is written as a variable.
+the program from within the loop itself if it is written as a variable.
 @smallexample
 
 int i, number = 20;
@@ -8184,7 +8171,7 @@ for (i = 0; i <= number; i++)
 @end smallexample
 @noindent
 This is so nerve shattering that many languages forbid it outright. To
-be sure, is not often a very good idea to use this facility, but in
+be sure, it is not often a very good idea to use this facility, but in
 the right hands, it is a powerful one to have around.
 
 @node Quitting Loops and Hurrying Them Up!, Nested Loops, The flexible for loop, Loops
@@ -8194,7 +8181,7 @@ C provides a simple way of
 jumping out of any of the three loops above at any stage, whether it
 has finished or not. The statement which performs this action is the
 same statement which was used to jump out of @code{switch} statements in
-last section.
+the previous chapter.
 @smallexample
 
   break;
@@ -8259,14 +8246,14 @@ for (i = -10; i <= 10; i++)
 
 @end smallexample
 
-@node Nested Loops, Questions 18, Quitting Loops and Hurrying Them Up!, Loops
+@node Nested Loops, Questions 17, Quitting Loops and Hurrying Them Up!, Loops
 @section Nested Loops
 
 Like decisions, loops will also nest: that is, loops can be
 placed inside other loops. Although this feature will work with any
 loop at all, it is most commonly used with the for loop, because this
 is easiest to control. The idea of nested loops is important for
-multi-dimensional arrays which are examined in the next section. A
+multi-dimensional arrays which are examined in the next chapter. A
 @code{for} loop controls the number of times that a particular set of
 statements will be carried out. Another outer loop could be used
 to control the number of times that a whole loop is carried out. To
@@ -8320,7 +8307,7 @@ The output of this program is a "kind of" square:
 
 @end smallexample
 
-@node Questions 18,  , Nested Loops, Loops
+@node Questions 17,  , Nested Loops, Loops
 @section Questions
 
 @enumerate
@@ -8332,7 +8319,7 @@ How many kinds of loop does C offer, and what are they?
 When is the condition tested in each of the loops?
 
 @item
-Which of the loops is always executed once?
+Which of the loops is always executed at least once?
 
 @item
 Write a program which copies all input to output line by line.
@@ -8340,6 +8327,12 @@ Write a program which copies all input to output line by line.
 @item
 Write a program to get 10 numbers from the user and add them together.
 
+@item
+Write a program to get a lot of numbers from the user and print
+out the maximum and minimum of those.
+
+@item
+Try to make a counter which is reset to zero when it reaches 9999.
 
 @end enumerate
 
@@ -8357,7 +8350,7 @@ Write a program to get 10 numbers from the user and add them together.
 @cindex Arrays
 @cindex Tables
 Arrays are a convenient way of grouping a lot of variables under
-a single variable name. Arrays are like pigeon holes or chessboards,
+a single variable name. Arrays are like pigeon holes or chess boards,
 with each compartment or square acting as a storage place; they can be
 one dimensional, two dimensional or more dimensional!
 An array is defined using square brackets @code{[]}. For example: an
@@ -8368,8 +8361,7 @@ array of three integers called "triplet" would be declared like this:
 
 @end smallexample
 @noindent
-Notice that there is no space between the square bracket @code{[} and the
-name of the array. This statement would cause space for three integers
+This statement would cause space for three integer
 type variables to be created in memory next to each other as in the
 diagram below.
 
@@ -8419,7 +8411,7 @@ usually means that all the elements in the array will be set to zero.
 * Initializing Arrays::         
 * Arrays and Pointers::         
 * Arrays as Parameters::        
-* Questions 19::                
+* Questions 18::                
 @end menu
 
 @node Why use arrays?, Limits and The Dimension of an array, Arrays, Arrays
@@ -8434,7 +8426,7 @@ two reasons:
 @item   The storage spaces in arrays have indicies. These
      numbers can often be related to variables in a 
      problem and so there is a logical connection to be
-     made between an array an a program.
+     made between an array and a program.
 
 @item    In C, arrays can be initialized very easily indeed.
      It is far easier to initialize an array than it is to
@@ -8511,18 +8503,18 @@ in particular:
      array. (See the section below about this.)
 
 @item  The loop goes on for ever and the program never
-     gives up the information which is stores. In short:
+     gives up the information which it stores. In short:
      it is not very useful.
 @end itemize
 Another example, which comes readily to mind, would be the use of
 a two dimensional array for storing the positions of chess pieces in a
-chess game. Two dimensional arrays have a chessboard-like structure
+chess game. Two dimensional arrays have a structure like that of a chess board
 already and they require two numbers (two indicies) to pinpoint a
-particular storage cell. This is just like the numbers on chess
+particular storage cell. This is just like the coordinates of squares on a chess
 board, so there is an immediate and logical connection between an
 array and the problem of keeping track of the pieces on a chess board.
 Arrays play an important role in the handling of string
-variables. Strings are important enough to have a section of their
+variables. Strings are important enough to have a chapter of their
 own, @xref{Strings}.
 
 @node Limits and The Dimension of an array, Arrays and for loops, Why use arrays?, Arrays
@@ -8723,7 +8715,7 @@ for (i = 2; i < SIZE; i++)
 /* Level 2                                                 */
 /***********************************************************/
 
-DeleteMultiplesOf (i,sieve)   /* Delete.. of an integer */
+DeleteMultiplesOf (i,sieve)   /* Delete ... of an integer */
 
 short i,sieve[SIZE];
 
@@ -8824,7 +8816,7 @@ would be stored:
 @noindent
 Another way of saying that arrays are stored row-wise is to say that
 the second index varies fastest, because a two-dimensional array is
-always thought of as...
+always thought of as ...
 @smallexample
 
     array[row][column]
@@ -8832,7 +8824,7 @@ always thought of as...
 @end smallexample
 @noindent
 so for every row stored, there will be lots of columns inside that
-row. That means the column index goes from 0..@code{SIZE} inside every row,
+row. That means the column index goes from 0 to @code{SIZE} inside every row,
 so it is changing faster as the line of storage is followed.
 
 A three dimensional array, like a cube or a cuboid, could also be
@@ -8956,7 +8948,7 @@ while (NORESPONSE)
    UpdateDisplay(array,++generation);
 
    printf ("\n\nQ for quit. RETURN to continue.\n");
-   if(quit()) break;
+   if (quit()) break;
    @}
 @}
 
@@ -9295,7 +9287,7 @@ while (getchar() != '\n')
 
 @end smallexample
 @noindent
-etc... Try experimenting with different starting patterns.
+etc. Try experimenting with different starting patterns.
 
 
 @node Initializing Arrays, Arrays and Pointers, Output of Game of Life, Arrays
@@ -9312,7 +9304,7 @@ array[3] = 12;
 @noindent
 or perhaps with the aid of one or more for loops. Because it is
 tedious, to say the least, not to mention uneconomical, to initialize
-the values of each element to as different value, C provides another
+the values of each element to a different value, C provides another
 method, which employs a single assignment operator @samp{=} and curly
 braces @code{@{} @code{@}}.
 @emph{This method only works for static variables and external variables.}
@@ -9412,7 +9404,7 @@ The code above sets the array @code{arrayname} to zero. This method of
 getting at array data is not recommended by this author except in very
 simple computer environments. If a program is running on a normal
 microcomputer, then there should be few problems with this alternative
-method of handling arrays. On the hand, if the microcomputer is
+method of handling arrays. On the other hand, if the microcomputer is
 multi-tasking, or the program is running on a larger system which has
 a limited manager, then memory ceases to be something which can be
 thought of as a sequence of boxes standing next to one another. A
@@ -9423,7 +9415,7 @@ string of memory locations: it might be scattered around in different
 places. So
 @smallexample
 
-ptr = arrayname + 5;
+ptr = arrayname + 4;
 
 @end smallexample
 @noindent
@@ -9432,13 +9424,13 @@ array. This could be found instead using the @samp{&} operator. A pointer to
 the fifth element can be reliably found with:
 @smallexample
 
-ptr = &(arrayname[5]);
+ptr = &(arrayname[4]);
 
 @end smallexample
 @noindent
 Be warned!
 
-@node Arrays as Parameters, Questions 19, Arrays and Pointers, Arrays
+@node Arrays as Parameters, Questions 18, Arrays and Pointers, Arrays
 @section Arrays as Parameters
 
 What happens if we want to pass an array as a
@@ -9457,7 +9449,7 @@ char array[23];
 
 function (array);
 
-.....
+...
 @}
 
 function (arrayformal)
@@ -9473,7 +9465,7 @@ Any function which writes to the array, passed as a parameter,
 will affect the original copy. Array parameters are always variable
 parameters
 
-@node Questions 19,  , Arrays as Parameters, Arrays
+@node Questions 18,  , Arrays as Parameters, Arrays
 @section Questions
 
 @enumerate 
@@ -9515,7 +9507,7 @@ double quotes.
 @end smallexample
 @noindent
 A string may contain any character, including special control
-characters, such as @samp{\n}, @samp{\r}, @samp{\7} etc...
+characters, such as @samp{\n}, @samp{\r}, @samp{\7} etc.
 @smallexample
 
   "Beep! \7 Newline \n..."
@@ -9532,7 +9524,7 @@ characters, such as @samp{\n}, @samp{\r}, @samp{\7} etc...
 * Example 22::                  
 * String Input/Output::         
 * Example 23::                  
-* Questions 20::                
+* Questions 19::                
 @end menu
 
 @node Conventions and Declarations, Strings Arrays and Pointers, Strings, Strings
@@ -9542,7 +9534,7 @@ characters, such as @samp{\n}, @samp{\r}, @samp{\7} etc...
 There is an important distinction between a string and a single
 character in C. The convention is that single characters are enclosed
 by single quotes e.g. @samp{*} and have the type char. Strings, on the
-hand, are enclosed by double quotes e.g. @code{"string..."} and have the type
+other hand, are enclosed by double quotes e.g. @code{"string ..."} and have the type
 "pointer to char" @samp{(char *)} or array of char. Here are some
 declarations for strings which are given without immediate
 explanations.
@@ -9576,10 +9568,10 @@ main ()
 @section Strings, Arrays and Pointers
 
 A string is really an array of characters. It is stored at some
-place the memory and is given an end marker which standard library
+place in the memory and is given an end marker which standard library
 functions can recognize as being the end of the string. The end marker
 is called the zero (or @code{NULL}) byte because it is just a byte which
-contains the value zero: @samp{\0}. Programs rarely gets to see
+contains the value zero: @samp{\0}. Programs rarely get to see
 this end marker as most functions which handle strings use it or add
 it automatically.
 
@@ -9587,8 +9579,7 @@ Strings can be declared in two main ways; one of these is as an
 array of characters, the other is as a pointer to some pre-assigned
 array. Perhaps the simplest way of seeing how C stores arrays is to give
 an extreme example which would probably never be used in
-practice. Think of how a string called @code{string} might be used to to
-store the message "Tedious!". The fact that a string is an array
+practice. Think of how a string called @code{string} might be used to store the message "Tedious!". The fact that a string is an array
 of characters might lead you to write something like:
 @smallexample
 
@@ -9618,7 +9609,7 @@ time to waste, but it is so laborious that C provides a special
 initialization service for strings, which bypasses the need to assign
 every single character with a new assignment!. There are six ways of
 assigning constant strings to arrays. (A constant string is one which
-is actually typed into the program, not one which in typed in by the
+is actually typed into the program, not one which is typed in by the
 user.) They are written into a short compilable program below. The
 explanation follows.
 
@@ -9637,16 +9628,16 @@ char  global_string2[] = "Declared as an array";
 
 main ()
 
-@{ char *auto_string = "initializer...";
+@{ char *auto_string = "initializer ...";
 
-  static char *stat_strng = "initializer...";
+  static char *stat_strng = "initializer ...";
 
-  static char statarraystr[] = "initializer....";
+  static char statarraystr[] = "initializer ...";
 
 
-/* char arraystr[] = "initializer....";  IS ILLEGAL! */
+/* char arraystr[] = "initializer ...";  IS ILLEGAL! */
 /* This is because the array is an "auto" type       */
-/* which cannot be preinitialized, but...            */
+/* which cannot be preinitialized, but ...           */
 
   char arraystr[20];
 
@@ -9659,7 +9650,7 @@ printf ("%s %s %s", auto_string, stat_strng, statarraystr);
 @end smallexample
 @noindent
 The details of what goes on with strings can be difficult to get to
-grips with. It is a good idea to get revise pointers and arrays before
+grips with. It is a good idea to revise pointers and arrays before
 reading the explanations below. Notice the diagrams too: they are
 probably more helpful than words.
 
@@ -9781,7 +9772,7 @@ Notice the way in which the static declaration works. It is
 initialized once at compile time, so there is effectively only one
 statement in this function and that is the return statement. This
 function retains the pointer information from call to call.
-The Morse coder program could be rewritten more
+The Morse code program could be rewritten more
 economically using static strings, @xref{Example 15}.
 
 @node Example 21, Strings from the user, Arrays of Strings, Strings
@@ -9808,13 +9799,13 @@ main ()
 
 @{ short digit;
 
-printf ("Enter any digit in the range 0..9");
+printf ("Enter any digit in the range 0 to 9");
 
 scanf ("%h",&digit);
 
 if ((digit < 0) || (digit > 9))
    @{
-   printf ("Number was not in range 0..9");
+   printf ("Number was not in range 0 to 9");
    return (CODE);
    @}
 
@@ -9831,7 +9822,6 @@ short digit;
 @{
   static char *code[] = 
      @{
-     "dummy",             /* index starts at 0 */
      "-----",
      ".----",
      "..---",
@@ -9863,7 +9853,7 @@ that it doesn't matter at all!
 
 One way of getting a simple, single string from the user is to
 define an array and to read the characters one by one. An example of
-this was the Game of Life program the the previous chapter:
+this was the Game of Life program in the previous chapter:
 @itemize @bullet
 @item Define the array to be a certain size
 
@@ -10069,7 +10059,7 @@ those listed below, but, again, it really depends upon the compiler.
                The value returned is 0 if the two strings
                were identical. If the strings were not the
                same, this function indicates the (ASCII)
-               alphabetical order of the two. @code{s1 > s2},
+               alphabetical order of the two. If @code{s1 > s2},
                alphabetically, then the value is @code{> 0}. If 
                @code{s1 < s2} then the value is @code{< 0}. Note that
                numbers come before letters in the ASCII
@@ -10119,7 +10109,7 @@ of memory is allocated for it using @code{malloc()}. (Notice that this block
 of memory is one byte longer than the value returned by @code{strlen()},
 because @code{strlen()} does not count the end of string marker @samp{\0}.)
 @code{malloc()} returns a pointer to the space allocated, which is then
-stored in the array called @code{array}. Finally the strings is copied from
+stored in the array called @code{array}. Finally the string is copied from
 the buffer to the new storage with the library function @code{strcpy()}. This
 process is repeated for each of the 10 strings. Notice that the
 program exits through a low level function called @code{QuitSafely()}. The
@@ -10182,18 +10172,17 @@ QuitSafely(array);
 @}
 
 /******************************************************/
-/* Snakes & Ladders!                                  */
+/* Level 1                                            */
 /******************************************************/
 
 QuitSafely (array)       /* Quit & de-alloc memory */
 
 char *array[NOOFSTR];
 
-@{ int i, len;
+@{ int i;
 
 for (i = 0; i < NOOFSTR; i++)
    @{
-   len = strlen(array[i]) + 1;
    if (free (array[i]) != 0)
       @{
       printf ("Debug: free failed\n");
@@ -10249,7 +10238,7 @@ strptr = gets(buffer);
 If the routine is successful in getting a string, it returns the value
 @code{buffer} to the string pointer @code{strptr}. Otherwise it returns
 @code{NULL} (==0). The advantage of @code{gets()} over
-@code{scanf("%s"..)} is that it will read spaces in strings, whereas
+@code{scanf("%s",...)} is that it will read spaces in strings, whereas
 @code{scanf()} usually will not. @code{gets()} quits reading when it
 finds a newline character: that is, when the user presses @kbd{RETURN}.
 
@@ -10304,13 +10293,13 @@ contain the formatted output. If the string is not large enough, then a
 crash could be in store! This can also be considered a potential
 security problem, since buffer overflows can be used to capture control
 of important programs. Note that on system V Unix systems the
-@code{sprintf} functionr returns a pointer to the start of the printed
+@code{sprintf} function returns a pointer to the start of the printed
 string, breaking the pattern of the other printf functions. To make such
 an implementation compatible with the usual form you would have to
 write:
 @smallexample
 
- n = strlen(sprintf(@var{parameters......}));
+ n = strlen(sprintf(@var{parameters ...}));
 
 @end smallexample
 
@@ -10324,7 +10313,7 @@ from a string, as though it were an input file.
 int n;
 char *sp;
 
-n = sscanf (sp,"control string", pointers...);
+n = sscanf (sp,"control string", pointers ...);
 
 @end smallexample
 @noindent
@@ -10336,7 +10325,7 @@ an error occurred. The conversion specifiers are identical to those
 for @code{scanf()}. 
 @cindex Parsing strings
 
-@node Example 23, Questions 20, String Input/Output, Strings
+@node Example 23, Questions 19, String Input/Output, Strings
 @section Example Listing
 
 @smallexample
@@ -10380,7 +10369,7 @@ if (n > SIZE)
 
 @end smallexample
 
-@node Questions 20,  , Example 23, Strings
+@node Questions 19,  , Example 23, Strings
 @section Questions
 
 @enumerate
@@ -10429,7 +10418,7 @@ programs. These could be passed arguments on the command line. For instance:
 @end smallexample
 @noindent
 In these examples, the first word is the command itself, while the subsequent
-words are options and arguments to the command. We need some way getting this
+words are options and arguments to the command. We need some way of getting this
 information into a C program. Unix solved this problem by passing C programs
 an array of these arguments together with their number as parameters to the
 function @code{main()}. Since then most other operating systems have adopted
@@ -10553,7 +10542,7 @@ string = getenv("HOME");
 
 @noindent
 @samp{string} is now a pointer to static but public data. You should not
-use @samp{string} as if it were you're own property because it will be
+use @samp{string} as if it were your own property because it will be
 used again by the system. Copy it's contents to another string before
 using the data.
 @smallexample
@@ -10619,8 +10608,8 @@ character, or @code{char} type variable.
 @item     isalpha(ch)
          This returns true if @code{ch} is
                          alphabetic and false otherwise. 
-                         Alphabetic means @code{a}..@code{z} or 
-@code{A}..@code{Z}.
+                         Alphabetic means @code{a} to @code{z} or 
+@code{A} to @code{Z}.
 
 @item      isupper(ch)
          Returns true if the character was
@@ -10636,13 +10625,13 @@ Returns true if the character was
 
 @item      isdigit(ch)              
 Returns true if the character was a
-                         digit in the range 0..9.
+                         digit in the range 0 to 9.
 
 @item      isxdigit(ch)
         Returns true if the character was a
                          valid hexadecimal digit: that is, a
-                         number from 0..9 or a letter a..f
-                         or A..F.
+                         number from 0 to 9 or a letter a to f
+                         or A to F.
 
 @item      isspace(ch)
          Returns true if the character was a
@@ -10677,7 +10666,7 @@ Returns true if a character is
 @item      isascii(ch)
          Returns true if the character is
                          a valid ASCII character: that is,
-                         it has a code in the range 0..127.
+                         it has a code in the range 0 to 127.
 
 @item      iscsym(ch)
           Returns true if the character was
@@ -10703,7 +10692,7 @@ This converts a character into its
 @item     toascii(ch)
           This strips off bit 7 of a
                          character so that it is in the
-                         range 0..127: that is, a valid
+                         range 0 to 127: that is, a valid
                          ASCII character.
 @end table
 
@@ -10955,7 +10944,7 @@ handling, @xref{Strings}.
                The value returned is 0 if the two strings
                were identical. If the strings were not the
                same, this function indicates the (ASCII)
-               alphabetical order of the two. @code{s1 > s2},
+               alphabetical order of the two. If @code{s1 > s2},
                alphabetically, then the value is @samp{> 0}. If 
                @code{s1 < s2} then the value is @code{< 0}. Note that
                numbers come before letters in the ASCII
@@ -11102,7 +11091,7 @@ while (TRUE)
 @cindex Mathematical functions
 C has a library of standard mathematical functions which can be
 accessed by @code{#includ}ing the appropriate header files (@file{math.h}
-etc.). It should be noted that all of these functions work with
+etc). It should be noted that all of these functions work with
 @code{double} or @code{long float} type variables. All of C's mathematical
 capabilities are written for long variable types. Here is a list of
 the functions which can be expected in the standard library file. The
@@ -11201,7 +11190,7 @@ Find the absolute or unsigned value of the
  result = pow(x,y); /*raise x to the power y */
  result = pow(x,2); /*find x-squared */
 
- result = pow(2.0,3.2); /* find 2 to the power 3.2 ...*/
+ result = pow(2.0,3.2); /* find 2 to the power 3.2 ... */
 @end smallexample
 
 @item       sqrt()
@@ -11609,11 +11598,11 @@ Many operators in C are more versatile than they appear to be, at
 first glance. Take, for example, the following operators
 @smallexample
 
-   =     ++     --   +=  -=   etc...
+   =     ++     --   +=  -=   etc.
 
 @end smallexample
 @noindent
-the assignment, increment and decrement operators... These innocent
+the assignment, increment and decrement operators ... These innocent
 looking operators can be used in some surprising ways which make C
 source code very neat and compact.
 
@@ -11674,13 +11663,13 @@ above has the value 5. This has some important implications.
 * Example 29::                  
 * Cautions about Style::        
 * Example 30::                  
-* Ques 21::                     
+* Questions 22::                     
 @end menu
 
 @node Extended and Hidden =, Example 28, Hidden Operators, Hidden Operators
 @section Extended and Hidden @code{=}
 
-The idea that assignment statement has a value, can be used to
+The idea that an assignment statement has a value, can be used to
 make C programs neat and tidy for one simple reason: it means that a
 whole assignment statement can be used in place of a value. For
 instance, the value @samp{c = 0;} could be assigned to a variable b:
@@ -11731,9 +11720,9 @@ In other assignments (as above)
 @item
 As a parameter for functions
 @item
-Inside a comparison (== > < etc..)
+Inside a comparison (== > < etc.)
 @item
-As an index for arrays....
+As an index for arrays ...
 @end itemize
 @noindent
 The uses are manifold. Consider how an assignment statement might be
@@ -11767,19 +11756,19 @@ ProcessCharacter(ch = getchar());
 
 if (ch == '*')
    @{
-   printf ("Starry, Starry Night...");
+   printf ("Starry, Starry Night ...");
    @}
 
 @end smallexample
 @noindent
 The purpose in adding the second statement is to impress the fact that
 @code{ch} has been assigned quite legitimately and it is still defined in the
-next statement and the one after...until it is re-assigned by a new
+next statement and the one after ... until it is re-assigned by a new
 assignment statement. The fact that the assignment was hidden inside
 another statement does not make it any less valid. All the same
 remarks apply about the specialized assignment operators @code{+=},
 @code{*=}, @code{/=}
-etc..
+etc.
 
 @node Example 28, Hidden @code{++} @code{--}, Extended and Hidden =, Hidden Operators
 @section Example
@@ -12000,7 +11989,7 @@ printf ("%d",Value());
 
 /*******************************************************/
 
-Value()                      /* Check for zero .... */
+Value()                      /* Check for zero ... */
 
 @{ int value;
 
@@ -12069,7 +12058,7 @@ if (i <= --comparison)
 
 @end smallexample
 
-@node Example 30, Ques 21, Cautions about Style, Hidden Operators
+@node Example 30, Questions 22, Cautions about Style, Hidden Operators
 @section Example
 
 @smallexample
@@ -12164,7 +12153,7 @@ for (i = 1; ++ctr <= MAXNO; i = ctr*5)
 
 @end smallexample
 
-@node Ques 21,  , Example 30, Hidden Operators
+@node Questions 22,  , Example 30, Hidden Operators
 @section Questions
 
 @enumerate
@@ -12198,9 +12187,9 @@ for (i = 1; ++ctr <= MAXNO; i = ctr*5)
 @chapter More on data types
 
 @cindex Types, advanced
-This section is about the remaining data types which C has to
+This chapter is about the remaining data types which C has to
 offer programmers. Since C allows you to define new data types
-we shall not be able to cover all of the possiblities, only the
+we shall not be able to cover all of the possibilities, only the
 most important examples. The most important of these are
 
 @table @code
@@ -12296,7 +12285,7 @@ greater than 255.
 
 @cindex enum type
 @cindex Enumerated data
-In all previous sections, the files @code{stdin}, @code{stdout} and 
+In all previous chapters, the files @code{stdin}, @code{stdout} and 
 @code{stderr}
 alone have been used in programs. These special files are always
 handled implicitly by functions like @code{printf()} and @code{scanf()}: the
@@ -12459,7 +12448,7 @@ enum planets
 @end smallexample
 This would probably yield values @code{Mercury = 0}, 
 @code{Venus = 1}, @code{Earth = 12},
-@code{Mars = 13}, @code{Jupiter = 14} ... etc.
+@code{Mars = 13}, @code{Jupiter = 14} and so on.
 If the user tries to force a value which the compiler has already
 used then the compiler will complain.
 
@@ -12616,12 +12605,12 @@ types of train.
 
 @cindex void
 @code{void} is a peculiar data type which has some debatable uses.  The
-void datatypes was introduced in order to make C syntactically
+void data type was introduced in order to make C syntactically
 consistent. The main idea of @code{void} is to be able to declare
 functions which have no return value. The word `void' is intended in the
 meaning `empty' rather than `invalid'.  If you recall, the default is
 for C functions to return a value of type @code{int}. The value returned
-by a function did not @emph{have} to be specified could always be
+by a function did not @emph{have} to be specified and could always be
 discarded, so this was not a problem in practice. It did make compiler
 checks more difficult however: how do you warn someone about
 inconsistent return values if it is legal to ignore return values?
@@ -12681,7 +12670,7 @@ Few programmers would do this since it merely clutters up
 programs with irrelevant verbiage.
 
 @item 
-A @code{void} pointer can point to to any kind of object. This
+A @code{void} pointer can point to any kind of object. This
      means that any pointer can be assigned to a @code{void}
      pointer, regardless of its type. This is also a highly
 questionable feature of the ANSI draft. It replaces the meaning
@@ -12700,14 +12689,14 @@ standard. The idea behind this type is to allow memory mapped
 input/output to be held in C variables. Variables which are declared
 volatile will be able to have their values altered in ways which a
 program does not explicitly define: that is, by external influences
-such as clocks, external ports, hardware, interrupts etc...  
+such as clocks, external ports, hardware, interrupts etc.  
 
-The @code{volatile} datatype has found another use since the arrival of
+The @code{volatile} data type has found another use since the arrival of
 multiprocessor, multithreaded operating systems. Independent processes
 which share common memory could each change a variable independently.
 In other words, in a multithreaded environment the value of a variable
 set by one process in shared memory might be altered by another process
-without its knowledge. The keyword @code{volatile} servers as a
+without its knowledge. The keyword @code{volatile} serves as a
 warning to the compiler that any optimizing code it produces should
 not rely on caching the value of the variable, it should always
 reread its value.
@@ -12745,12 +12734,12 @@ const int array[] =
 
 @noindent 
 @code{array[0]} then has the value 1,
-@code{array[1]} has the value 2 ... and so on. Any attempt to assign
+@code{array[1]} has the value 2 and so on. Any attempt to assign
 values to const types will result in compilation errors.
 
 It is worth comparing the @code{const} declaration to enumerated data,
 since they are connected in a very simple way. The following two sets
-of of statements are the same:
+of statements are the same:
 @smallexample
 
   enum numbers
@@ -12916,11 +12905,11 @@ section concerns the main uses of bit operations for high level programs
 and it assumes a certain amount of knowledge about programming at the
 low level. You may wish to consult a book on
 assembly language programming to learn about low level memory
-operations, in more detail.
+operations in more detail.
 
 @menu
 * Bit Patterns::                
-* Flags registers::             
+* Flags Registers and Messages::             
 * Bit Operators and Assignments::  
 * Bit operators::               
 * Shift Operations::            
@@ -12928,11 +12917,11 @@ operations, in more detail.
 * Example 33::                  
 * Output 33::                   
 * Example 34::                  
-* Example 35::                  
+* Output 34::                  
 * Questions 24::                
 @end menu
 
-@node Bit Patterns, Flags registers, Machine Level Operations, Machine Level Operations
+@node Bit Patterns, Flags Registers and Messages, Machine Level Operations, Machine Level Operations
 @section Bit Patterns
 
 All computer data, of any type, are bit patterns. The only
@@ -12973,7 +12962,7 @@ Programmers who are interested in performing bit operations often
 work in hexadecimal because every hexadecimal digit conveniently
 handles four bits in one go (16 is 2 to the power 4).
 
-@node Flags registers, Bit Operators and Assignments, Bit Patterns, Machine Level Operations
+@node Flags Registers and Messages, Bit Operators and Assignments, Bit Patterns, Machine Level Operations
 @section Flags, Registers and Messages
 
 A @emph{register} is a place inside a computer processor chip, where
@@ -12991,7 +12980,7 @@ Messages are just like pseudo status registers: they are
 collections of flags which signal special information between
 different devices and/or different programs in a computer
 system. Messages do not necessarily have fixed locations: they may be
-passed a parameters. Messages are a very compact way of passing
+passed as parameters. Messages are a very compact way of passing
 information to low level functions in a program.
 Flags, registers, pseudo-registers and messages are all treated
 as bit patterns. A program which makes use of them must therefore be
@@ -13009,12 +12998,12 @@ in C, perhaps with the aid of a typedef statement.
 
 @end smallexample
 @noindent
-The flags or bits in a register/message... have the values 1 or 0,
+The flags or bits in a register/message ... have the values 1 or 0,
 depending upon whether they are on or off (set or cleared). A
 program can test for this by using combinations of the operators which
 C provides.
 
-@node Bit Operators and Assignments, Bit operators, Flags registers, Machine Level Operations
+@node Bit Operators and Assignments, Bit operators, Flags Registers and Messages, Machine Level Operations
 @section Bit Operators and Assignments
 
 C provides the following operators for handling bit patterns:
@@ -13022,7 +13011,7 @@ C provides the following operators for handling bit patterns:
 @table @code
 
 @item     <<
-   Bit shift left (a specified number or bit positions)
+   Bit shift left (a specified number of bit positions)
 @item     >>
    Bit shift right(a specified number of bit positions)
 
@@ -13055,7 +13044,7 @@ The meaning and the syntax of these operators is given below.
 @section The Meaning of Bit Operators
 
 Bitwise operations are not to be confused with logical operations
-(@code{&&}, @code{||}...) A bit pattern is made up of 0s and 1s and
+(@code{&&}, @code{||}, ...) A bit pattern is made up of 0s and 1s and
 bitwise operators operate individually upon each bit in the
 operand. Every 0 or 1 undergoes the operations individually.
 Bitwise operators (AND, OR) can be used in place of logical
@@ -13105,7 +13094,7 @@ So for example, using the boxed value (1) above:
 @end smallexample
 @noindent
 would have the value 2, because the bit pattern would have been moved
-one place the the left:
+one place to the left:
 @smallexample
 
      128  64  32  16  8   4   2   1
@@ -13229,7 +13218,7 @@ As a truth table this would be summarized as follows:
 
 @end smallexample
 @noindent
-Both value 1 AND value 2 have to be 1 in order for the result or be 1. 
+Both value 1 AND value 2 have to be 1 in order for the result to be 1. 
 
 @node OR, XOR, AND, Truth Tables and Masking
 @subsection OR @code{|}
@@ -13265,8 +13254,11 @@ The result is 1 if one OR the other OR both of the values is 1.
 @noindent
 The result is 1 if one OR the other (but not both) of the values is 1.
 
+@node Masks,  , XOR, Truth Tables and Masking
+@subsection Masks
+
 Bit patterns and logic operators are often used to make @emph{masks}. A
-mask is as a thing which fits over a bit pattern and
+mask can be thought of as a thing which fits over a bit pattern and
 modifies the result in order perhaps to single out particular bits,
 usually to cover up part of a bit pattern. This is particularly
 pertinent for handling flags, where a programmer wishes to know if one
@@ -13287,7 +13279,7 @@ MASK & VALUE2 == 00000000
 
 @end smallexample
 
-The zeros in the mask @emph{masks off} the first seven bits and leave only
+The zeros in the mask @emph{mask off} the first seven bits and leave only
 the last one to reveal its true value. Alternatively, masks can be
 built up by specifying several flags:
 
@@ -13378,7 +13370,7 @@ Binary value = 00000011
 @end smallexample
 
 
-@node Example 34, Example 35, Output 33, Machine Level Operations
+@node Example 34, Output 34, Output 33, Machine Level Operations
 @section Example
 
 @smallexample
@@ -13431,20 +13423,23 @@ printf ("Hex value = %1x\n",hex);
 @end smallexample
 
 
-@node Example 35, Questions 24, Example 34, Machine Level Operations
-@section Example
+@node Output 34, Questions 24, Example 34, Machine Level Operations
+@section Output
 
 @smallexample
 
-Enter any number less than 128: 56
-Binary value = 00111000
-
-Enter any value less than 128: 3
-Binary value = 00000011
+Enter an 8-bit binary number: 11011001
+Hex value = d9
+Enter an 8-bit binary number: 01110010
+Hex value = 72
+Enter an 8-bit binary number: 10110010
+Hex value = b2
+Enter an 8-bit binary number: 01010110
+Hex value = 56
 
 @end smallexample
 
-@node Questions 24,  , Example 35, Machine Level Operations
+@node Questions 24,  , Output 34, Machine Level Operations
 @section Questions
 
 @enumerate
@@ -14179,7 +14174,7 @@ A new "standard file" must be used (not all C compilers
 A new file must be opened in order to write to the printer device
 @end table
 
-The first method is not generally satisfactory for applications
+The first method is not generally satisfactory for application
 programs, because the standard files @code{stdin} and @code{stdout}
 can only easily be redirected from the operating system command line
 interpreter (when a program is run by typing its name). Examples of
@@ -14198,7 +14193,7 @@ or "standard printer file" and data could be written to the printer by
 switching writing to the file like this:
 @smallexample
 
-fprintf (stdprn,"string %d...", integer);
+fprintf (stdprn,"string %d ...", integer);
 
 @end smallexample
 The final method of writing to the printer is to open a file to
@@ -14227,7 +14222,7 @@ if ((stdprn = fopen("PRT:","w")) == NULL)
 @section Example
 
 Here is an example program which reads a source file (for a
-program, written in C, Pascal or whatever...) and lists it, along with
+program, written in C, Pascal or whatever ...) and lists it, along with
 its line numbers. This kind of program is useful for debugging
 programs. The program provides the user with the option of sending the
 output to the printer. The printer device is assumed to have the
@@ -14243,7 +14238,7 @@ systems is given at the end.
 /***************************************************************/
 
    /* List a source file with line numbers attached. Like */
-   /* TYPE only with lines numbers too.                   */
+   /* TYPE only with line numbers too.                   */
 
 
 #include <stdio.h>
@@ -14403,7 +14398,7 @@ while (getchar() != '\n')
 @section Output
 
 Here is a sample portion of the output of this program as applied
-to one of the example programs in section 30.
+to one of the example programs in a later chapter, @xref{Example Programs}.
 
 @smallexample
 
@@ -14413,7 +14408,7 @@ to one of the example programs in section 30.
    4 /*                                                      */
    5 /********************************************************/
    6 
-   7                   /* See section 30 */
+   7                   /* See notes above */
    8 
    9    #include <stdio.h>
   10    #include <ctype.h>
@@ -14534,7 +14529,7 @@ FILE *fp;
 int  nowritten,n,size;
 char *ptr;
 
-nowritten = fread (ptr,size,n,fp);
+nowritten = fwrite (ptr,size,n,fp);
 
 @end smallexample
 @noindent
@@ -14623,7 +14618,7 @@ if (fseek (fp,pos,mode) != 0) /* find 50th character */
    @}
 
 fseek(fp,0L,0);                /* find beginning of file */
-fseek(fp,2L,0);                /* find the end of a file */
+fseek(fp,0L,2);                /* find the end of a file */
 
 if (fseek (fp,10L,1) != 0)     /* move 10 char's forward */
    @{
@@ -14916,7 +14911,7 @@ Number of bytes written
 @node lseek, unlink remove, write, Files and Devices
 @section @code{lseek()}
 
-Low level file handing functions have their equivalent of @code{fseek()}
+Low level file handling functions have their equivalent of @code{fseek()}
 for finding a specific position within a file. This is almost
 identical to @code{fseek()} except that it uses the file handle rather than a
 file pointer as a parameter and has a different return value. The
@@ -15021,7 +15016,7 @@ characters of text which can be saved.
 
 #include <stdio.h>
 #include <ctype.h>
-#include <fcntl.h>      /* defines O_RDONLY etc.. */
+#include <fcntl.h>      /* defines O_RDONLY etc */
 
 #define CODE    0
 #define SIZE    255
@@ -15378,8 +15373,8 @@ Write a statement which opens a low level file for writing.
 
 @item
 Write a program which checks for illegal characters in text
-files. Valid characters are ASCII codes 10,13,and 32..126. Anything
-else is illegal for programs.
+files. Valid characters are ASCII codes 10,13,and 32 to 126. Anything
+else is illegal for text files.
 
 @item
 What statement performs formatted writing to text files?
@@ -15458,7 +15453,7 @@ them from place to place. All of these things would be very difficult
 if data were scattered about liberally, with no particular
 structure. For this reason C has the facility, within it, to make
 sealed capsules -- not of program code -- but of program data, so that
-all of these actions very simply by grouping variables together in
+all of these actions become very simple by grouping variables together in
 convenient packages for handling. These capsules are called
 structures.
 
@@ -15503,7 +15498,7 @@ struct PersonalData
 
 @end smallexample
 @noindent
-This purpose of this statement is to create a model or template to
+The purpose of this statement is to create a model or template to
 define what a variable of type @code{struct PersonalData} will look like. It
 says: define a type of variable which collectively holds a string called
 @code{name}, a string called @code{address} and three integers called
@@ -15682,7 +15677,7 @@ struct PersonalData function ()
 @end smallexample
 @noindent
 Notice that the return type of such a function must also be declared
-in the function which calls that it, in the usual way. The reader will
+in the function which calls it, in the usual way. The reader will
 begin to see that structure names account for a good deal of typing!
 The typedef statement is a very good way of reducing this burden.
 
@@ -15736,7 +15731,7 @@ though that type is itself made up of lots of different types. An
 array would be declared in the usual way:
 @smallexample
 
-int i;
+int i, j;
 
 struct PersonalData x,array[size];
 
@@ -15773,7 +15768,7 @@ allows more convenient handling of real-life strings.
 
    /* Simple program to initialize some structures */
    /* and to print them out again. Does no error   */
-   /* checking, so be wary of string sizes etc..   */
+   /* checking, so be wary of string sizes etc     */
 
 #include <stdio.h>
 
@@ -15833,7 +15828,7 @@ dat.Address = malloc(ADDRSIZE);
 strcpy (dat.Address,gets(strbuff));
 
 printf ("Year of birth:");
-dat.YearOfBirth = getint (1900,1987);
+dat.YearOfBirth = getint (1900,2015);
 
 printf ("Month of birth:");
 dat.MonthOfBirth = getint (1,12);
@@ -15994,7 +15989,7 @@ struct Name *ptr;
 only. @code{ptr} can be assigned to any other pointer of similar type and it
 can be used to access the members of a structure. It is in the second
 of these actions that a new structure operator is revealed.
-According to the rules which have described so far, a structure
+According to the rules which have been described so far, a structure
 member could be accessed by pointers with the following statements:
 @smallexample
 
@@ -16107,7 +16102,7 @@ dat->Address = malloc(ADDRSIZE);
 strcpy (dat->Address,gets(strbuff));
 
 printf ("Year of birth:");
-dat->YearOfBirth = getint (1900,1987);
+dat->YearOfBirth = getint (1900,2015);
 
 printf ("Month of birth:");
 dat->MonthOfBirth = getint (1,12);
@@ -16230,7 +16225,7 @@ for that structure, which was used to define it, but it does not
 generally know, in advance, how many bytes long a structure is. In
 fact, it is seldom possible to know this information, since a
 structure may occupy more memory than the sum of its parts. How then
-does a program know how must space to allocate? The C compiler comes
+does a program know how much space to allocate? The C compiler comes
 to the rescue here, by providing a compile time operator called
 @smallexample
 
@@ -16286,7 +16281,7 @@ aligned pointer to it, called @code{ptr}.
 @end smallexample
 @noindent
 This rather laboured statement provides both the memory and the location
-of that memory in a legal and type-sensical way.  The next section of
+of that memory in a legal and type-sensical way.  The next chapter of
 this book discusses what we can do with dynamically allocated
 structures.
 
@@ -16309,7 +16304,7 @@ a standard data size we can guarantee that any hole left when
 dynamically allocated memory is freed will always be reusable
 by another instance of the same type of union. This is a natural
 strategy in system programming where many instances of different
-kinds of variables with a related purpose and stored dynamically.
+kinds of variables with a related purpose are stored dynamically.
 
 @menu
 * Declaration of union::        
@@ -16441,7 +16436,7 @@ var.x_status = CHAR;
 
 @end smallexample
 @noindent
-and so on...
+and so on ...
 
 @node Questions 26,  , Unions, Structures and Unions
 @section Questions
@@ -16455,12 +16450,12 @@ What is the difference between a structure and a union?
 What is a member?
 
 @item
-If @code{x} is a variable, how would you find 
-out the value of a member called @code{mem}.
+If @code{x} is a structure variable, how would you find 
+out the value of a member called @code{mem}?
 
 @item
 If @code{ptr} is a pointer to a structure, how would you find out the 
-value of a member called @code{mem}.
+value of a member called @code{mem}?
 
 @item
 A union is a group of variables in a single package. True or false?
@@ -16537,7 +16532,7 @@ particular thoughts. The arrows tend to suggest that pointers will
 play a role in the data structure. The blocks tend to suggest that
 sealed capsules or @code{struct} type data will also play a role. Putting
 these two together creates the idea of a `town structure' containing
-pointers to neighouring villages which lie on roads to the North,
+pointers to neighbouring villages which lie on roads to the North,
 South, East and West of the town, as well as the information about the
 town itself. This town structure might look something like this:
 @smallexample
@@ -16632,7 +16627,7 @@ storage space: they are only a way of finding out the contents of
 storage space which already exists. In fact, a program must create its
 own space for data structures. The key phrase is dynamic
 storage: a program makes space for structures as new ones are required
-and deletes space which is does not require. The functions which
+and deletes space which it does not require. The functions which
 perform this memory allocation and release are:
 @smallexample
 
@@ -16659,10 +16654,10 @@ use in advance.
 
 @end itemize
 
-The remaining parts of this section aim to provide a basic plan
+The remaining parts of this chapter aim to provide a basic plan
 or formula for putting data structures together in C. This is done
 with recourse to two example structures, which become two example
-programs in the next chapter.
+programs in a later chapter.
 
 @node Programme For Building Data Structures, Setting Up A Data Structure, Tools, Data structures
 @section Programme For Building Data Structures
@@ -16757,7 +16752,7 @@ repeating the following actions as many times as is necessary.
    ptr->north = NULL;
    ptr->south = NULL;
 
-   /* etc.. initialize members */
+   /* etc. initialize members */
 
    root->north = ptr;
 
@@ -16779,7 +16774,7 @@ it has found a pointer which doesn't lead anywhere.
 
 @cindex Binary tree
 @cindex Linked list
-Two data structures of thids kind are very common:
+Two data structures of this kind are very common:
 the @emph{linked list} and the @code{binary tree} and both work upon the
 principles outlined above (In fact they are just different
 manifestations of the same thing.)
@@ -16800,7 +16795,7 @@ struct list
 @end smallexample
 @noindent
 A linked list has only a single pointer per structure, which points to
-the successor in the list. If the blocks were labelled A B C D E... then
+the successor in the list. If the blocks were labelled A, B, C, D, E, ... then
 B would be the successor of A; C would be the successor of B and so on.
 Linked lists have two advantages over one dimensional arrays: they can
 be sorted easily (see diagram) and they can be made any length at all.
@@ -16831,8 +16826,8 @@ branches are taken to mean `greater than' and `less than' respectively.
 The programs which handle these data structures are written in the form
 of complete, usable application programs. They are simple by
 professional standards, but they are long by book standards so they are
-contained in a section by themselves, along with their accompanying
-programmers' documentation, @xref{Example Programs chapter}.
+contained in a chapter by themselves, along with their accompanying
+programmers' documentation, @xref{Example Programs}.
 
 
 @node Questions 27,  , Example Structures, Data structures
@@ -16875,7 +16870,7 @@ structures?
 @c CHAPTER
 @c **********************************************************************
 
-@node Recursion, Example Programs chapter, Data structures, Top
+@node Recursion, Example Programs, Data structures, Top
 @chapter Recursion
 
 @sp 1
@@ -16883,8 +16878,8 @@ structures?
 @sp 1
 
 @cindex Recursion
-This section is about program structures which can talk about
-themselves. What happens to a function which makes a call itself?
+This chapter is about program structures which can talk about
+themselves. What happens to a function which makes a call to itself?
 Examine the function below:
 @smallexample
 
@@ -16909,7 +16904,7 @@ no less. Eventually the program comes upon the statement
 @code{Well_Function();} and it makes a call to that function again. It then
 begins executing statements in @code{Well_function()}, from the beginning, as
 though it were a new function, until it comes upon the statement
-@code{Well_Function()} and then it calls the function again....
+@code{Well_Function()} and then it calls the function again ...
 
 
 This kind of function calling scenario is doomed to continue
@@ -16991,8 +16986,8 @@ has to return to and puts that note on top of the stack. It then begins
 executing statements. When it comes to the call @code{Well_Function()}
 again, it makes a new note of where it has to come back to and deposits
 it on top of the stack. It then begins the function again and when it
-finds the function call, it makes a new note and puts on the top of the
-stack.... As this process continues, the memory gets filled up with the
+finds the function call, it makes a new note and puts it on the top of the
+stack ... As this process continues, the memory gets filled up with the
 program's messages to itself: the stack of messages gets larger and
 larger. Since the function has no chance of returning control to its
 caller, the messages never get taken off the stack and it just builds
@@ -17024,7 +17019,7 @@ the stack.
 A function like @code{Well_Function()} digs itself a well of infinite
 depth. It punches a great hole in a program; it has no place in a
 levelled structure diagram. The function is pathological because it causes
-the stack fill up the memory of the computer. A better name for this
+the stack to fill up the memory of the computer. A better name for this
 function would be:
 @smallexample
 
@@ -17052,11 +17047,11 @@ recursion is about functions which contain themselves at all levels,
 this tends to suggest that recursion would be useful for dealing with
 these self-similar problems. Data structures are prime candidates for
 this because they are made up of identical structure types, connected
-together in a way which make them look like programs connected up by
+together in a way which makes them look like programs connected up by
 function calls.
 
 Recursive functions can be tamed by making sure that there is a
-safe way exit them, so that recursion only happens under particular
+safe way to exit them, so that recursion only happens under particular
 circumstances. The aim is to control the number of times that
 recursion takes place by making a decision about what happens in the
 function: the decision about whether a function calls itself or
@@ -17082,10 +17077,10 @@ else
 @end smallexample
 @noindent
 A call of @code{WellFunction(4)} would make this function drop down four
-stack levels and then return. Notice the way in which the if..else
+stack levels and then return. Notice the way in which the if ... else
 statement shields the program from the recursion when @code{nooftimes}
 equals zero. It effectively acts as a safety net, stopping the
-programming from plunging down the level well infinitely.
+program from plunging down the well of levels infinitely.
 
 @node Simple Example without a Data Structure, Simple Example With a Data Structure, Tame Recursion and Self-Similarity, Recursion
 @section Simple Example without a Data Structure
@@ -17154,7 +17149,7 @@ three. The statement:
 @noindent
 causes a call to be made to @code{factorial()}. The value of @code{n} is set to
 three. @code{factorial()} then tests whether @code{n} is zero (which it is not) so
-it takes the alternative branch of the @samp{if..else} statement. This
+it takes the alternative branch of the @samp{if ... else} statement. This
 instructs it to return the value of:
 @smallexample
 
@@ -17241,7 +17236,7 @@ struct list *ptr;
 @{
 if (free((char *) ptr) != 0)
    @{
-   printf ("DEBUG [Z0/TktDtStrct] memory release failure\n");
+   printf ("Debug: memory release failure\n");
    @}
 @}
 
@@ -17340,7 +17335,7 @@ larger and it will never be able to satisfy the condition that
 return. The stack would fill up the memory and the program would plunge
 down an unending recursive well.
 
-If global variables and parameters are used instead, this
+If local variables and parameters are used instead, this
 difficulty can be controlled much more easily. @code{alterGLOBAL()} cannot
 alter a variable in @code{recursion()} by accident, if only local variables
 are used, because it only works with its own local copies of
@@ -17368,12 +17363,12 @@ State the major disadvantage of recursion.
 @c **********************************************************************
 
 
-@node Example Programs chapter, Errors and debugging, Recursion, Top
+@node Example Programs, Errors and debugging, Recursion, Top
 @chapter Example Programs
 
 @cindex Example code
-The aim of this section is to provide two substantial examples of
-C, which use the data structures described in section 28.
+The aim of this chapter is to provide two substantial examples of
+C, which use the data structures described in a previous chapter, @xref{Data structures}.
 
 @menu
 * Statistical Data Handler::    
@@ -17381,12 +17376,12 @@ C, which use the data structures described in section 28.
 * Variable Cross Referencer::   
 @end menu
 
-@node Statistical Data Handler, Listing stat, Example Programs chapter, Example Programs chapter
+@node Statistical Data Handler, Listing stat, Example Programs, Example Programs
 @section Statistical Data Handler
 
 The first program is a utility which allows the user to type sets
 of floating point data into an editor and to calculate the mean,
-standard deviation...and so on, of those data. The program is capable
+standard deviation and so on, of those data. The program is capable
 of loading and saving the data to disk, as well as being able to
 handle several sets of data at once. The editor works in insert or
 overwrite modes.
@@ -17421,12 +17416,12 @@ sets can be added at any time by making this value larger.
 @subsection  Insert/Overwrite
 
 A project file can be edited in either insert mode or overwrite
-mode. Files which contain no data may only be edited insert mode. The
+mode. Files which contain no data may only be edited in insert mode. The
 editor senses this and selects the mode automatically. In insert mode
 the user is prompted for values. Type 0.0 in place of an entry to get
 out of this mode.  In overwrite mode the user is offered each entry in
 turn. If a non digit character is typed in (such as a @samp{.} (dot) or
-a @samp{-} (dash) etc..) the value of an entry is not altered. However,
+a @samp{-} (dash) etc) the value of an entry is not altered. However,
 if a new value is entered, the new value will replace the old one. By
 default, the values are offered in turn from 1 to the final
 value. However, on selecting overwrite mode, the user is prompted for a
@@ -17450,7 +17445,7 @@ following purposes.
 
 @table @code
 @item    #include <stdio.h>
-   Standard IO eader file
+   Standard I/O header file
 @item    #include <ctype.h>
    Contains character ID macros
 @item    #include <math.h>
@@ -17491,7 +17486,7 @@ lists. The array provides the roots of several independent linked
 lists: one for each group of data. These linked lists are attended to
 by toolkit routines and by special functions such as @code{over()}.
 
-@node Listing stat, Variable Cross Referencer, Statistical Data Handler, Example Programs chapter
+@node Listing stat, Variable Cross Referencer, Statistical Data Handler, Example Programs
 @section Listing
 
 @smallexample
@@ -17659,7 +17654,7 @@ ch = getkey();
 
 switch (tolower(ch))
    @{
-   case 'a' : printf ("\nHow many groups for this file? (0..%d)\n\n",GRPS);
+   case 'a' : printf ("\nHow many groups for this file? (0 to %d)\n\n",GRPS);
               return (DATSETS = getint(0,GRPS));
 
    case 'e' : return (DATSETS);
@@ -18025,7 +18020,7 @@ return (p);
 
 /*************************************************************/
 
-struct list *startfrom (ctr,i)   /* Find ith node in list */
+struct list *startfrom (ctr,i)   /* Find kth node in list */
 
 int *ctr,i;
 
@@ -18056,7 +18051,7 @@ int i;
 if ((thispos = newstruct()) == NULL)
    @{
    warning();
-   printf ("DEBUG **: Free memory pool is empty");
+   printf ("Debug: free memory pool is empty");
    exit(0);
    @}
 
@@ -18109,7 +18104,7 @@ struct list *ptr;
 @{
 if (free((char *) ptr) != 0)
    @{
-   printf ("DEBUG [Z0/TktDtStrct] memory release faliure\n");
+   printf ("Debug: memory release failure\n");
    @}
 @}
 
@@ -18253,11 +18248,11 @@ while (getchar() != '\n');
 
 @end smallexample
 
-@node Variable Cross Referencer,  , Listing stat, Example Programs chapter
+@node Variable Cross Referencer,  , Listing stat, Example Programs
 @section Variable Cross Referencer
 
 A variable cross referencer is a utility which produces a list of all
-the identifiers in a C program (variables, macros, functions...)  and
+the identifiers in a C program (variables, macros, functions, ...) and
 lists the line numbers of those identifiers within the source file. This
 is sometimes useful for finding errors and for spotting variables,
 functions and macros which are never used, since they show up clearly as
@@ -18271,7 +18266,7 @@ operation of the program.
 @menu
 * Listing Cref.c::              
 * Output of Cross Referencer::  
-* Commonts on cref.c::          
+* Comments on cref.c::          
 @end menu
 
 @node Listing Cref.c, Output of Cross Referencer, Variable Cross Referencer, Variable Cross Referencer
@@ -18382,7 +18377,7 @@ operation of the program.
  101    printf ("\nIdentifier Cross Reference V 1.0\n\n");
  102    if ((fp = fopen (filename(),"r")) == NULL)
  103       @{
- 104       printf ("Can't read file .. Aborted!\n\n");
+ 104       printf ("Can't read file ... Aborted!\n\n");
  105       exit(0);
  106       @}
  107    CH = getc(fp);
@@ -18523,7 +18518,7 @@ operation of the program.
  242 
  243       case '\'': if (skiptochar (fp,'\'') == 1)
  244                     @{
- 245                     if (CH=='\'') CH = getc(fp);;
+ 245                     if (CH=='\'') CH = getc(fp);
  246                     @}
  247                  break;
  248 
@@ -18753,7 +18748,7 @@ operation of the program.
  472    @{
  473    if (ungetc(ch,fp) != ch)
  474       @{
- 475       printf ("\nDebug: Toolkit file input: backone() FAILED\n");
+ 475       printf ("\nDebug: toolkit file input: backone() FAILED\n");
  476       exit(0);
  477       @}
  478    @}
@@ -18851,7 +18846,7 @@ operation of the program.
 
 @end smallexample
 
-@node Output of Cross Referencer, Commonts on cref.c, Listing Cref.c, Variable Cross Referencer
+@node Output of Cross Referencer, Comments on cref.c, Listing Cref.c, Variable Cross Referencer
 @subsection Output of Cross Referencer
 
 @smallexample
@@ -19050,7 +19045,7 @@ ungetc()             473
 
 @end smallexample
 
-@node Commonts on cref.c,  , Output of Cross Referencer, Variable Cross Referencer
+@node Comments on cref.c,  , Output of Cross Referencer, Variable Cross Referencer
 @subsection Comments
 
 This simplified program could be improved in a number of
@@ -19073,7 +19068,7 @@ ways. Here are some suggestions for improvement:
 @c **********************************************************************
 
 
-@node Errors and debugging, Summary, Example Programs chapter, Top
+@node Errors and debugging, Summary, Example Programs, Top
 @chapter Errors and debugging
 
 @sp 1
@@ -19083,7 +19078,7 @@ ways. Here are some suggestions for improvement:
 @cindex Errors, diagnosing
 @cindex Debugging
 Debugging can be a difficult process. In many cases compiler
-errors are not generated because the actual error which was present
+errors are not generated because of the error reported by the compiler,
 but because the compiler got out of step.  Often the error messages
 give a completely misleading impression of what has gone wrong. It is
 useful therefore to build a list of errors and probable causes
@@ -19096,7 +19091,7 @@ and perhaps give some insight into the way C works.
 * Tracing errors::              
 * Pathological Problems::       
 * Porting Programs between computers::  
-* Qu::                          
+* Questions 30::                          
 @end menu
 
 @node Compiler Trappable Errors, Run time errors, Errors and debugging, Errors and debugging
@@ -19192,8 +19187,10 @@ might generate something like "lvalue required".
 @subsection Forgetting to declare a function which is not type int
 
 All functions return values of @code{int} by default. If it is required
-that they return another type of variable, this must by declared in
-two places: a) in the function which calls the new function, along
+that they return another type of variable, this must be declared in
+two places: 
+
+a) In the function which calls the new function, along
 with the other declarations:
 @smallexample
 
@@ -19206,7 +19203,9 @@ CallFunction ()
 @end smallexample
 The @code{function1()} is type @code{char}; @code{function2()} 
 is type pointer to
-char. This must also be declared where the function is defined:
+char. 
+
+b) This must also be declared where the function is defined:
 @smallexample
 
 char function1 ()
@@ -19279,7 +19278,7 @@ i = (short) j * 2;
 * Conversion string in scanf or printf wrong::  
 * Accidental confusion of int short and char::  
 * Arrays out of bounds::        
-* Mathematical Error::          
+* Mathematical Errors::          
 * Uncoordinated Output using put/get I/O::  
 * Global Variables and Recursion::  
 @end menu
@@ -19368,13 +19367,12 @@ incremented by 1 after the assignment has taken place. So if you find
 that a program is out of step by 1, this could be the cause.
 
 @node Unwarranted assumptions about storage of arrays/structures, Number of actual and formal parameters does not match, Confusing C++ and ++C, Run time errors
-@subsection Unwarranted assumptions about storage
+@subsection Unwarranted assumptions about storage of arrays/structures
 
 C stores arrays in rows, and as far as the language is concerned
 the storage locations are next to one another in one place up to the
 end of the array. This might not be exactly true,
-in general. A program will be loaded into one or more areas (where
-ever the operating system can find space) and new variable space will
+in general. A program will be loaded into one or more areas (wherever the operating system can find space) and new variable space will
 be found wherever it is available, but this will not generally be in
 whole blocks `side by side' in the memory. The following sort of
 construction only works for simple data types:
@@ -19385,14 +19383,13 @@ char array[10];
 *array = 0;
 *(array + 1) = 0;
 ...
-*(array + 10) = 0;
+*(array + 9) = 0;
 
 @end smallexample 
 @noindent 
 While it is true that the variable "array"
 used without its square brackets is a pointer to the first element of
-the array, it is not necessarily true that the array will necessarily
-be stored in this way. Using:
+the array, it is not necessarily true that the array will be stored in this way. Using:
 @smallexample
 
 char array[10];
@@ -19400,16 +19397,16 @@ char array[10];
 array[0] = 0;
 array[1] = 0;
 ...
-array[10] = 0;
+array[9] = 0;
 
 
 @end smallexample
 @noindent
-is safe. When finding a pointer to, say, the third element, you should not
+is safe. When finding a pointer to, say, the fourth element, you should not
 assume that
 @smallexample
 
-array + 3 * sizeof (@var{datatype})
+array + 3
 
 @end smallexample
 will be the location. Use:
@@ -19437,27 +19434,45 @@ spoil a program.
 @node Conversion string in scanf or printf wrong, Accidental confusion of int short and char, Number of actual and formal parameters does not match, Run time errors
 @subsection The conversion string in @code{scanf}/@code{printf} is wrong
 
-Incorrect I/O is can be the result of poorly matched conversion strings
-in I/O statements. These are wrong:
+Incorrect I/O can be the result of poorly matched conversion strings
+in I/O statements. For example:
 @smallexample
 
-float x;                                  float x;
-                      @var{should be}
-scanf ("%d",&x);                          scanf ("%f",&x);
+float x;
+scanf ("%d",&x);
 
 @end smallexample
 @noindent
-or even:
+
+should be:
+
 @smallexample
 
-double x;                                  float x;
-                      @var{should perhaps be}
-scanf  ("%f",&x);                          scanf("%ld",&x);
+float x;
+scanf ("%f",&x);
+
+@end smallexample
+@noindent
+
+and:
+@smallexample
+
+double x;
+scanf  ("%f",&x);
+
+@end smallexample
+@noindent
+
+should be:
+@smallexample
+
+double x;
+scanf  ("%lf",&x);
 
 @end smallexample
 
 Another effect which can occur if the conversion specifier is
-selected as being long when it the variable is really short is that
+selected as being long when the variable is really short is that
 neighbouring variables can receive the scanf values instead!  For
 instance if two variables of the same type happen to be stored next to
 each other in the memory:
@@ -19518,7 +19533,7 @@ conversion specifiers!!
 
 Often when working with characters one also wants to know their ASCII
 values. If characters/integers are passed as parameters it is easy to
-mistype @code{char} for @code{int} etc.. The compiler probably won't
+mistype @code{char} for @code{int} etc. The compiler probably won't
 notice this because no conversion is needed between @code{int} and
 @code{char}. Characters are stored by their ASCII values. On the other hand if
 the declaration is wrong:
@@ -19536,7 +19551,7 @@ int (ch);
 but the character is continually assumed to be a character by the
 program, a crashworthy routine might be the result.
 
-@node Arrays out of bounds, Mathematical Error, Accidental confusion of int short and char, Run time errors
+@node Arrays out of bounds, Mathematical Errors, Accidental confusion of int short and char, Run time errors
 @subsection Arrays out of bounds
 
 C does not check the limits of arrays. If an
@@ -19547,20 +19562,20 @@ type array[5];
 
 @end smallexample
 @noindent
-and the you allow the program to write to @code{array[6]} or more, C
+and you allow the program to write to @code{array[5]} or more, C
 will not complain. However the computer might! In the worst case this
 could cause the program to crash.
 
-@node Mathematical Error, Uncoordinated Output using put/get I/O, Arrays out of bounds, Run time errors
-@subsection Mathematical Error
+@node Mathematical Errors, Uncoordinated Output using put/get I/O, Arrays out of bounds, Run time errors
+@subsection Mathematical Errors
 
 C does not necessarily signal mathematical errors. A program
 might continue regardless of the fact that a mathematical function
 failed. Some mathematical errors (often subtle ones) can be caused
-by forgetting to include to file @file{math.h} at the start of the
+by forgetting to include the file @file{math.h} at the start of the
 program.
 
-@node Uncoordinated Output using put/get I/O, Global Variables and Recursion, Mathematical Error, Run time errors
+@node Uncoordinated Output using put/get I/O, Global Variables and Recursion, Mathematical Errors, Run time errors
 @subsection Uncoordinated Output using buffered I/O
 
 Output which is generated by functions like @code{putchar()},
@@ -19693,10 +19708,10 @@ seemingly innocent macro defined by
 @end smallexample
 @noindent
 caused the C library functions @code{creat()} and @code{remove()} to
-fail is remarkable ways on an early Amiga C compiler! The problem was
+fail in remarkable ways on an early Amiga C compiler! The problem was
 that a single call to @code{CLRSCRN()} at the start of the function
 @code{DelFile()} caused both of the library functions (in very different
-parts of the program) above to make recursing function calls the
+parts of the program) above to make recursive function calls to the
 function @code{DelFile()}. The deletion of @code{CLRSCRN()} cured the
 problem entirely!  In general it is worth checking carefully the names
 of all functions within a program to be sure that they do not infringe
@@ -19714,13 +19729,13 @@ the day, when all else fails and the manuals are in the waste paper
 basket, the last possibility, however improbable, has to be the
 truth."
 
-@node Porting Programs between computers, Qu, Pathological Problems, Errors and debugging
+@node Porting Programs between computers, Questions 30, Pathological Problems, Errors and debugging
 @section Porting Programs between computers
 
 Programs written according to the style guidelines described in
 this book should be highly portable. Nevertheless, there are almost
 inevitably problems in porting programs from one computer to
-another. The most likely area of incompatibility betwee compilers
+another. The most likely area of incompatibility between compilers
 regards filing operations, especially @code{scanf()}. Programmers attempting
 to transfer programs between machines are recommended to look at all
 the @code{scanf()} statements first and to check all the conversion
@@ -19749,11 +19764,11 @@ Here are some more potential problems to look out for:
      may labour at it for some time!
 
 @item   Check for assumptions made about filenames. e.g.
-     limited/unlimited size, valid characters etc..
+     limited/unlimited size, valid characters etc.
 
 @end itemize
 
-@node Qu,  , Porting Programs between computers, Errors and debugging
+@node Questions 30,  , Porting Programs between computers, Errors and debugging
 @section Questions
 
 Spot the errors in the following:
@@ -19777,9 +19792,9 @@ int i;
 @item
 @smallexample
 
-while (a < b)
+if (a < b)
    @{
-   while (b == 0)
+   if (b == 0)
       @{
       printf ("a is negative");
    @}
@@ -19816,6 +19831,7 @@ struct Name
 * Storage Classes::             
 * Identifiers::                 
 * Statements::                  
+* Operators and Precedence::                  
 * Character Utilities::         
 * Special Control Characters::  
 * Input/Output Functions::      
@@ -19848,7 +19864,7 @@ struct Name
 @item     else
       statement
 @item     entry
-     (reserved for the future use)
+     (reserved for future use)
 @item     extern
     storage class specifier
 @item     float
@@ -19910,7 +19926,7 @@ struct Name
 @item     #define
    define a preprocessor symbol/macro
 @item     #undef
-    un-define a previously defnined symbol
+    un-define a previously defined symbol
 @item     #if
        test for conditional compilation
 @item     #ifdef
@@ -19952,11 +19968,11 @@ Mathematical definitions (libm)
 
 @table @emph
 @item     Integer        
-Characters 0..9 only
+Characters 0 to 9 only
 @item     Octal          
-Prefix 0 (zero) chars 0..7 only
+Prefix 0 (zero) characters 0 to 7 only
 @item     Hexadecimal    
-Prefix 0x (zero ex) chars a..f A..f 0..9
+Prefix 0x (zero ex) characters a to f, A to F or 0 to 9
 @item     Explicit Long  
 Integer/Octal or Hexadecimal types can be
                declared long by writing L immediately after
@@ -19964,7 +19980,7 @@ Integer/Octal or Hexadecimal types can be
 @item     Character      
 Declared in single quotes e.g. @code{'x'} @code{'\n'}
 @item     Float          
-Characters 0..0 and one "." May also use
+Characters 0 to 9 and one ".". May also use
                scientific notation exponents with @code{e} or @code{E}
                preceding them. e.g. @code{2.14E12 3.2e-2}
 @item     Strings        
@@ -20019,13 +20035,13 @@ Value can be changed by agents outside the program.
 @node Identifiers, Statements, Storage Classes, Summary
 @section Identifiers
 
-Idenitifiers may contain the characters:
-@code{0..9}, @code{A..Z}, @code{a..z} and  @code{_}
+Identifiers may contain the characters:
+@code{0} to @code{9}, @code{A} to @code{Z}, @code{a} to @code{z} and  @code{_}
 (the underscore character).
 Identifiers may not begin with a number. (The compiler assumes that an
 object beginning with a number is a number.)
 
-@node Statements, Character Utilities, Identifiers, Summary
+@node Statements, Operators and Precedence, Identifiers, Summary
 @section Statements
 
 A single statement is any valid string in C which ends with a
@@ -20033,11 +20049,11 @@ semi colon. e.g.
 @smallexample
 
 a = 6;
-printf ("I love C because...");
+printf ("I love C because ...");
 
 @end smallexample
 @noindent
-A compound statement is any number of single statements groued
+A compound statement is any number of single statements grouped
 together in curly braces. The curly braces do not end with a semi
 colon and stand in place of a single statement. Any pair of curly
 braces may contain local declarations after the opening brace. e.g.
@@ -20050,12 +20066,13 @@ a = 6;
 @{ int a;
 
 a = 6;
-printf ("I love C because...");
+printf ("I love C because ...");
 @}
 
 @end smallexample
 
-Summary of Operators and Precedence
+@node Operators and Precedence, Character Utilities, Statements, Summary
+@section Operators and Precedence
 
 The highest priority operators are listed first.
 
@@ -20094,7 +20111,7 @@ The highest priority operators are listed first.
 
     &               bitwise AND                   left to right
     ^               bitwise exclusive OR          left to right
-    |               bitwsie includive OR          left to right
+    |               bitwise inclusive OR          left to right
     &&              logical AND                   left to right
     ||              logical OR                    left to right
 
@@ -20112,7 +20129,7 @@ The highest priority operators are listed first.
 
 @end smallexample
 
-@node Character Utilities, Special Control Characters, Statements, Summary
+@node Character Utilities, Special Control Characters, Operators and Precedence, Summary
 @section Character Utilities
 @smallexample
 char ch;
@@ -20121,29 +20138,29 @@ char ch;
 
 @table @code
 @item     isalpha(ch)
-    Is alphabetic a..z A..Z
+    Is alphabetic a to z or A to Z
 @item     isupper(ch)
     Is upper case
 @item     islower(ch)
     Is lower case
 @item     isdigit(ch)
-    Is in the range 0..9
+    Is in the range 0 to 9
 @item     isxdigit(ch)
-   Is 0..9 or a..f or A..F
+   Is 0 to 9, a to f or A to F
 @item     isspace(ch)    
-Is white space character (space/newline/tab)
+Is white space (space/newline/tab)
 @item     ispunct(ch)    
 Is punctuation or symbolic
 @item     isalnum(ch)    
-Is alphanumeric (alphavetic or number)
+Is alphanumeric (alphabetic or numeric)
 @item     isprint(ch)    
 Is printable on the screen (and space)
 @item     isgraph(ch)    
-If the character is printable (not space)
+Is printable on the screen (and not space)
 @item     iscntrl(ch)    
 Is a control character (not printable)
 @item     isascii(ch)    
-Is in the range 0..127
+Is in the range 0 to 127
 @item     iscsym(ch)     
 Is a valid character for a C identifier
 
@@ -20186,7 +20203,7 @@ followed by some other character. These characters are listed below.
         backslash character    \
 @item     \@var{ddd}
       character @var{ddd} where ddd is an ASCII code
-               given in octal or base 8. (See Appendix C)
+               given in octal or base 8, @xref{Character Conversion Table}.
 
 @end table
 
@@ -20201,7 +20218,7 @@ Formatted input analysis
 @item     getchar()      
 Get one character from stdin file buffer
 @item     putchar()      
-Put one charcter in stdout file buffer
+Put one character in stdout file buffer
 @item     gets   ()      
 Get a string from stdin
 @item     puts   ()      
@@ -20292,7 +20309,7 @@ Use @code{f} or @code{e}, whichever is shorter
 The letter @samp{l} (ell) can be prefixed before these for long types.
 
 @node scanf conversions, Maths Library Summary, print conversions, Summary
-@section @code{scanf} conversion specifers
+@section @code{scanf} conversion specifiers
 
 The conversion characters for @code{scanf} are not identical 
 to those for @code{printf}
@@ -20399,12 +20416,11 @@ label : printf ("Ugh! You used a goto!");
 @c APPENDIX
 @c **********************************************************************
 
-@node reserved words list, Comparisons , Summary, Top
+@node reserved words list, Comparisons, Summary, Top
 @appendix All the Reserved Words
 
-Here is a list of all the reserved words in C.  The set of reserved
-words above is used to build up the basic instructions of C; you can not
-use them in programs your write
+Here is a list of all the reserved words in C.  They are used to build up the basic instructions of C; you cannot
+use them as identifiers in programs you write
 
 Please note that this list is somewhat misleading.  Many more words are
 out of bounds.  This is because most of the facilities which C offers
@@ -20451,10 +20467,10 @@ declaration.)
 @c **********************************************************************
 
      
-@node Comparisons , Character Conversion Table, reserved words list, Top
+@node Comparisons, Character Conversion Table, reserved words list, Top
 @appendix Three Languages: Words and Symbols Compared
 
-     If you are already familiar with Pascal (Algol..etc) or BBC BASIC,
+     If you are already familiar with Pascal (Algol.. etc) or BBC BASIC,
 the following table will give you a rough and ready indication of
 how the main words and symbols of the three languages relate.
 
@@ -20472,7 +20488,7 @@ how the main words and symbols of the three languages relate.
 @end group
 
 @group
-   printf ("..");        writeln ('..');     PRINT ".."
+   printf ("...");        writeln ('...');     PRINT "..."
                          write ('..');
 
    scanf ("..",a);       readln (a);         INPUT a
@@ -20520,8 +20536,8 @@ redundant "then". BASIC has no analogue of the @code{switch}
 construction. The loop constructions of C are far superior to those of
 either BASIC or Pascal however. Input and Output in C is more flexible
 than Pascal, though correspondingly less robust in terms of program
-crashability. Input and Output in C can match all of BASICs string
-operations and provide more, though string variables can be more
+crashability. Input and Output in C can match all of the string
+operations available in BASIC and provide more, though string variables can be more
 awkward to deal with. 
 
 
@@ -20529,14 +20545,14 @@ awkward to deal with.
 @c APPENDIX
 @c **********************************************************************
 
-@node Character Conversion Table, Emacs style file, Comparisons , Top
+@node Character Conversion Table, Emacs style file, Comparisons, Top
 @appendix Character Conversion Table
 
 @cindex ASCII codes
 @cindex Character conversion table
 @cindex Conversion table
 This table lists the decimal, octal, and hexadecimal numbers for
-characters 0 -- 127.
+characters 0 to 127.
 
 @smallexample
 @group
@@ -20731,7 +20747,7 @@ with the following site-lisp file:
 
 
 ;;;
-;;; Lite hack for å slippe å skrive inn kompileringskommandoen i c,
+;;; Lite hack for Ã¥ slippe Ã¥ skrive inn kompileringskommandoen i c,
 ;;; (hvis ikke Makfile eksisterer)
 ;;; samt en fancy heading hvis det er en ny fil.
 ;;;
@@ -20860,7 +20876,7 @@ with the following site-lisp file:
 
 @smallexample
 
-Chapter 1
+@section Chapter 1: Introduction
 
 1) A tool which translates high level language into machine language.
 
@@ -20872,7 +20888,7 @@ Chapter 1
 
 5) Compiler errors and runtime errors.
 
-Chapter 3
+@section Chapter 2: Reserved words and an example
 
 1) printf ("Wow big deal");
 
@@ -20883,7 +20899,7 @@ Chapter 3
 
 4) Most facilities are held in libraries
 
-Chapter 4
+@section Chapter 3: Operating systems and environments
 
 1) To provide a basic set of facilities to the user
 
@@ -20895,7 +20911,7 @@ Chapter 4
 
 5) By typing the name in 4)
 
-Chapter 5
+@section Chapter 4: Libraries
 
 1) #include <filename> or #include "filename"
 
@@ -20905,7 +20921,7 @@ Chapter 5
 
 4) Header file.
 
-Chapter 7
+@section Chapter 6: The form of a C program
 
 1) A group of statements enclosed by curly braces @{@}.
 
@@ -20914,15 +20930,15 @@ statements. (This is a matter of opinion, of course.)
 
 3) Not necessarily. It starts wherever main() is.
 
-4) It signifies the end of a block, the return of control to somethng else.
+4) It signifies the end of a block, the return of control to something else.
 
 5) The semi-colon (;)
 
-Chapter 8
+@section Chapter 7: Comments
 
 1) The compiler thinks the rest of the program is all one  comment!
 
-Chapter 9
+@section Chapter 8: Functions
 
 1) function (a,b)
 
@@ -20940,7 +20956,7 @@ Chapter 9
 
 5) By using "return".
 
-Chapter 10
+@section Chapter 9: Variables, Types and Declarations
 
 1) A name for some variable, function or macro
 
@@ -20957,17 +20973,17 @@ slightly larger + values than int.
 
 7) int
 
-8) At the function defintion and in the calling function.
+8) At the function definition and in the calling function.
 
 9) printf ("%d",(int)23.1256);
 
 10) No.
 
-Chapter 11
+@section Chapter 10: Parameters and Functions
 
 1) With variable parameters or with return()
 
-2) Where a function is definned, after its name: e.g.
+2) Where a function is defined, after its name: e.g.
 
      function (...)
 
@@ -20984,11 +21000,11 @@ Chapter 11
 
 6) No.
 
-Chapter 12
+@section Chapter 11: Scope : Local And Global
 
 1) A global variable can be accessed by any part of a program.
 
-2) A local variable canonly be accessed by a select part of a program.
+2) A local variable can only be accessed by a select part of a program.
 
 3) Local variables cannot leak out. Nothing outside them can reach local variables.
 
@@ -21012,7 +21028,7 @@ Chapter 12
 
 There are 6 storage spaces altogether.
 
-Chapter 13
+@section Chapter 12: Preprocessor Commands
 
 1) #define birthday 19 
 
@@ -21022,7 +21038,7 @@ Chapter 13
 
 4) false
 
-Chapter 14
+@section Chapter 13: Pointers
 
 1) A variable which holds the address of another variable
 
@@ -21035,9 +21051,9 @@ Chapter 14
 5) Because number has not been initialized. This expression initializes
 the place that number points to, not number itself. (See main text)
 
-Chapter 15
+@section Chapter 14: Standard Output and Standard Input
 
-printf
+@subsection printf
 
 1) #include <stdio.h>
 
@@ -21054,13 +21070,13 @@ printf
    c) Probably nothing
    d) Conversion string without matching value
 
-scanf
+@subsection scanf
 
 1) space, newline or tab
 
 5) true.
 
-Low level I/O
+@subsection Low level I/O
 
 1) The statement is possible provided putchar() is not implemented as a
 macro. It copies the input to the output: a simple way of writing on the
@@ -21070,9 +21086,9 @@ be seen on the output for some time!)
 2) ch = getchar();
    putchar (ch);
 
-Chapter 16
+@section Chapter 15: Assignments, Expressions and Operators
 
-1) The thing(s) an operator acts upon.
+1) The thing (or one of the things) an operator acts upon.
 
 2) printf ("%d",5 % 2);
 
@@ -21080,12 +21096,14 @@ Chapter 16
 
 4) variable = 10 - -5;
 
-5) if (1 != 23)
+@section Chapter 16: Decisions
+
+1) if (1 != 23)
  @{
  printf ("Thank goodness for mathematics");
  @}
 
-Chapter 18
+@section Chapter 17: Loops
 
 1) Three: while, do..while, for
 
@@ -21109,7 +21127,7 @@ Chapter 18
  putchar (ch);
  @}
 
-Chapter 19
+@section Chapter 18: Arrays
 
 1) The array identifier (without square brackets) is a pointer to the
 first element in the array.
@@ -21120,7 +21138,7 @@ first element in the array.
 3) double array[4][5];
    Valid array bounds from array[0][0] to array[3][4]
 
-Chapter 20
+@section Chapter 19: Strings
 
 1) Arrays of characters. Pointers to arrays of characters.
 
@@ -21129,7 +21147,7 @@ Chapter 20
 
 3) See the Morse code example.
 
-Chapter 22
+@section Chapter 21 Special Library Functions and Macros
 
 1) double
 
@@ -21142,15 +21160,15 @@ double, long float and int.
 
 5) Overflow, underflow, domain error, Loss of accuracy and division by zero.
 
-Chapter 23
+@section Chapter 22: Hidden operators and values
 
 1) ++, -- and any assignment or unary operator
 
 2) It could make a program too difficult to read
 
-3) No. The function would return before the vaue could be incremented.
+3) No. The function would return before the value could be incremented.
 
-Chapter 23
+@section Chapter 23: More on data types
 
 1) FILE is defined by stdio.h It is reserved only when this file is
 included. It is not a built in part of the language.
@@ -21169,14 +21187,14 @@ any other pointer type.
 
 7) True.
 
-Chapter 24
+@section Chapter 24: Machine Level Operations
 
 1) Nothing -- only the way it is used. Yes, every variable is a bit
 pattern. It is normal to use integer or character types for bit
 patterns.
 
-2) Inclusive OR is true if all possiblilities are true
-simultaneously. Exclusive OR is false if all possibilites are true
+2) Inclusive OR is true if all possibilities are true
+simultaneously. Exclusive OR is false if all possibilities are true
 simultaneously.
 
 3) Some kind of flag message perhaps. A bit pattern for certain.
@@ -21194,21 +21212,21 @@ simultaneously.
    b) 23 & ~23 == 00011111 & 11100000 == 0
    c) similarly 0: n & (NOT n) is always zero
 
-Chapter 26
+@section Chapter 25: Files and Devices
 
 1) a) a string which labels a file
-   b) a variable of type *fp which points to a FILE structure
+   b) a variable of type FILE * which points to a FILE structure
    c) the number of a file "portal" in the I/O array
 
-2) High level filing performs translations to text. Low level files untranslated bit data.
+2) High level filing performs translations to text. Low level files contain untranslated bit data.
 
 3) fp = fopen ("filename","r");
 
 4) fd = open ("filename",O_WRONLY);
 
-6) fprintf ()
+6) fprintf()
 
-Chapter 27
+@section Chapter 26: Structures and Unions
 
 1) A structure can hold several values at the same time. A union holds
 only one value at any one time.
@@ -21221,7 +21239,7 @@ only one value at any one time.
 
 5) False.
 
-Chapter 28
+@section Chapter 27: Data Structures
 
 1) A diagram which shows how structures are put together.
 
@@ -21231,11 +21249,11 @@ Chapter 28
 are built in such a way as to require only one name for a whole
 structure.
 
-4) With pointers. ptr->member etc...
+4) With pointers. ptr->member etc.
 
 5) ptr=(struct Binary Tree *)malloc(sizeof(struct Binary Tree));
 
-Chapter 29
+@section Chapter 28: Recursion
 
 1) A function which is defined in terms of itself.
 
@@ -21243,7 +21261,7 @@ Chapter 29
 
 3) A lot of memory is used as stack space.
 
-Chapter 31
+@section Chapter 30: Errors and debugging
 
 1) Declarations are in the wrong place.
 
