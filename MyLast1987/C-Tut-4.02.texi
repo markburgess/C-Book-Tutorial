@@ -1,4 +1,4 @@
-\input texinfo       @c -*-texinfo-*-
+ \input texinfo       @c -*-texinfo-*-
 @c %** start of header
 @setfilename C-tutorial.info
 @settitle C Programming Tutorial
@@ -92,7 +92,7 @@ preserved on all copies.
 @menu
 * Preface::                     
 * Introduction::                
-* Reserved words & example::    
+* Reserved words and example::    
 * Operating systems::           
 * Libraries::                   
 * Programming style::           
@@ -210,7 +210,7 @@ browser, or you can read this same text as a typeset, printed book.}
 @c **********************************************************************
 
 
-@node Introduction, Reserved words & example, Preface, Top
+@node Introduction, Reserved words and example, Preface, Top
 @chapter Introduction
 
 @sp 1
@@ -578,7 +578,7 @@ What are the two different kinds of error which can be in a program?
 @c CHAPTER
 @c **********************************************************************
 
-@node Reserved words & example, Operating systems, Introduction, Top
+@node Reserved words and example, Operating systems, Introduction, Top
 @chapter Reserved words and an example
 
 @cindex Reserved words
@@ -621,7 +621,7 @@ functions are defined and you cannot use their names.
 * Questions 2::                 
 @end menu
 
-@node printf, Example 1, Reserved words & example, Reserved words & example
+@node printf, Example 1, Reserved words and example, Reserved words and example
 @section The @code{printf()} function
 
 @cindex printf function
@@ -657,7 +657,7 @@ you can copy this to a file, compile and execute it.
 
 
 @c !!! Section name needs redoing  Example 1
-@node Example 1, Output 1, printf, Reserved words & example
+@node Example 1, Output 1, printf, Reserved words and example
 @section Example Listing
 
 @cindex Poem
@@ -693,7 +693,7 @@ you can copy this to a file, compile and execute it.
 @end smallexample
 
 @c !!! Section name needs redoing  Output 1
-@node Output 1, Questions 2, Example 1, Reserved words & example
+@node Output 1, Questions 2, Example 1, Reserved words and example
 @section Output
 
 @smallexample
@@ -716,7 +716,7 @@ We soon should come to 0
 @end smallexample
 
 
-@node Questions 2,  , Output 1, Reserved words & example
+@node Questions 2,  , Output 1, Reserved words and example
 @section Questions
 
 @enumerate
@@ -737,7 +737,7 @@ Why are there only a few reserved command words in C?
 @c CHAPTER
 @c **********************************************************************
 
-@node Operating systems, Libraries, Reserved words & example, Top
+@node Operating systems, Libraries, Reserved words and example, Top
 @chapter Operating systems and environments
 
 @sp 1
@@ -1267,7 +1267,7 @@ chapters will then expand upon this as a kind of basic plan.
 
 /****************************************************/
 
-main ()                /* Main program & start */
+main ()                /* Main program and start */
 
 @{ int a,b;                     /* declaration */
 
@@ -1624,7 +1624,7 @@ Where would you place the @code{printf} function in this hierarchy?
 
 /***********************************************/
 /*                                             */
-/* Function Snakes & Ladders                   */
+/* Function Snakes and Ladders                   */
 /*                                             */
 /***********************************************/
 
@@ -2547,7 +2547,7 @@ explained.
 
 #include <stdio.h>
 
-main ()               /* Use int float and char */
+main ()               /* Use int, float and char */
 
 @{ float x;
   int i;
@@ -3070,7 +3070,7 @@ printf ("%d",a);
 
   /**********************************************/
 
-SomeValue ()     /* Return an arbitrary no */
+SomeValue ()     /* Return an arbitrary number */
 
 @{
 return (42);
@@ -3120,7 +3120,7 @@ printf (" %d",j);
 /* level 1                                         */
 /***************************************************/
 
-double x_plus_one(x)          /* Add one to x ! */
+double x_plus_one(x)          /* Add one to x */
 
 double x;
 
@@ -4393,15 +4393,15 @@ most likely crash the program or corrupt some other data.
 /*                                            */
 /**********************************************/
 
-   /* Program swaps the variables which a,b */
-   /* point to. Not pointless really !      */
+   /* Program swaps the variables which a and b */
+   /* point to. Not pointless really!      */
 
 #include <stdio.h>
 
 
 main ()
 
-@{ int *a,*b,*c;               /* Declr ptrs */
+@{ int *a,*b,*c;               /* Declare pointers */
   int  A,B;               /* Declare storage */
 
 A = 12;               /* Initialize storage */
@@ -6076,7 +6076,7 @@ side of an assignment.
 
 /**************************************/
 /*                                    */
-/* Operators Demo # 1                 */
+/* Operators Demo #1                 */
 /*                                    */
 /**************************************/
 
@@ -6366,7 +6366,7 @@ level operations, which will be ignored at this stage:
 
 /**************************************/
 /*                                    */
-/* Operators Demo # 2                 */
+/* Operators Demo #2                 */
 /*                                    */
 /**************************************/
 
@@ -6389,7 +6389,7 @@ level operations, which will be ignored at this stage:
    i += 5;                           /* i = i + 5 */
    printf ("i += 5 : %d\n",i);
 
-   i--;                              /* i = i = 1 */
+   i--;                              /* i = i - 1 */
    printf ("i-- : %d\n",i);
 
    i -= 2;                           /* i = i - 2 */
@@ -7757,7 +7757,7 @@ more input left and printf out the number of spaces.
 /*                                             */
 /***********************************************/
 
- /* count all the spaces in an line of input */
+ /* count all the spaces in a line of input */
 
 
 #include <stdio.h>
@@ -8715,7 +8715,7 @@ for (i = 2; i < SIZE; i++)
 /* Level 2                                                 */
 /***********************************************************/
 
-DeleteMultiplesOf (i,sieve)   /* Delete ... of an integer */
+DeleteMultiplesOf (i,sieve)   /* Delete multiples of an integer */
 
 short i,sieve[SIZE];
 
@@ -8810,7 +8810,7 @@ would be stored:
 ------------------------------------
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 ------------------------------------
-*  ROW # 1  *  ROW # 2  *  ROW #3   * 
+*  ROW #1  *  ROW #2  *  ROW #3   * 
 
 @end smallexample
 @noindent
@@ -9742,7 +9742,7 @@ for (str_number = 0; str_number < 13; str_number++)
 
 /*********************************************************/
 
-char *menutext(n)           /* return n-th string ptr */
+char *menutext(n)           /* return n-th string pointer */
 
 int n;
 
@@ -10175,7 +10175,7 @@ QuitSafely(array);
 /* Level 1                                            */
 /******************************************************/
 
-QuitSafely (array)       /* Quit & de-alloc memory */
+QuitSafely (array)       /* Quit and de-allocate memory */
 
 char *array[NOOFSTR];
 
@@ -10708,7 +10708,7 @@ This converts a character into its
 /********************************************************/
 
    /* prints out all the ASCII characters which give */
-   /* the value "true" for the listed character fns  */
+   /* the value "true" for the listed character functions */
 
 #include <stdio.h>
 #include <ctype.h>   /* contains character utilities */
@@ -11945,7 +11945,7 @@ count while the end of string marker @samp{\0} is not found.
 
    /* Any assignment or increment operator has a value */
    /* which can be handed straight to printf() ...     */
-   /* Also compare the prefix / postfix forms of ++/-- */
+   /* Also compare the prefix and postfix forms of ++ and -- */
 
 
 #include <stdio.h>
@@ -12141,7 +12141,7 @@ putchar ('\n');
 
 /*****************************************************/
 
-main ()              /* Print out 5 x table */
+main ()              /* Print out 5 times table */
 
 @{ int i, ctr = 0;
 
@@ -12262,7 +12262,7 @@ For example:
 
 oct_value = 077;         /* 77 octal */
 
-hex_value = 0xFFEF;      /* FFEF hex */
+hex_value = 0xFFEF;      /* FFEF hexadecimal */
 
 @end smallexample
 @noindent
@@ -12512,7 +12512,7 @@ else
 /* Level 1                                                 */
 /***********************************************************/
 
-getobject (ob)                           /* yes or no ? */
+getobject (ob)                           /* yes or no? */
 
 enum treasures ob;
 
@@ -13381,7 +13381,7 @@ Binary value = 00000011
 /*                                                 */
 /***************************************************/
 
-  /* Convert binary numbers into hex    */
+  /* Convert binary numbers into hexadecimal */
 
 #include <stdio.h>
 #define NUMBEROFBITS 8
@@ -14298,7 +14298,7 @@ CloseFiles(Pon);
 /* Level 1                                                   */
 /*************************************************************/
 
-CloseFiles(Pon)                         /* close & tidy */
+CloseFiles(Pon)                         /* close and tidy */
 
 int Pon;
 
@@ -14364,7 +14364,7 @@ return (filenm);
 
 /*************************************************************/
 
-yes ()             /* Get a yes/no response from the user */
+yes ()             /* Get a yes or no response from the user */
 
 @{ char ch;
 
@@ -14620,7 +14620,7 @@ if (fseek (fp,pos,mode) != 0) /* find 50th character */
 fseek(fp,0L,0);                /* find beginning of file */
 fseek(fp,0L,2);                /* find the end of a file */
 
-if (fseek (fp,10L,1) != 0)     /* move 10 char's forward */
+if (fseek (fp,10L,1) != 0)     /* move 10 characters forward */
    @{
    printf("Error!\n");
    @}
@@ -15020,7 +15020,7 @@ characters of text which can be saved.
 
 #define CODE    0
 #define SIZE    255
-#define FNMSIZE 30            /* Max size of filenames */
+#define FNMSIZE 30            /* Maximum size of filenames */
 #define TRUE    1
 #define FALSE   0
 #define FAILED  -1
@@ -15210,7 +15210,7 @@ skipgarb();
 
 /*************************************************************/
 
-DeleteFile()            /* Delete a file from current dir */
+DeleteFile()            /* Delete a file from current directory */
 
 @{ char *filename(),getkey(),*fname;
 
@@ -15290,7 +15290,7 @@ return (statfilenm);
 
 /**************************************************************/
 
-sure ()                              /* is the user sure ? */
+sure ()                              /* is the user sure? */
 
 @{
 printf ("Are you absolutely, unquestionably certain? Y/N\n");
@@ -15325,7 +15325,7 @@ getkey();
 
 /**************************************************************/
 
-char getkey()               /* single key + RETURN response */
+char getkey()               /* single key and RETURN response */
 
 @{ char ch;
 
@@ -16042,7 +16042,7 @@ where @code{x} is a pre-assigned structure.
 
    /* This is the same program, using pointer references */
    /* instead of straight variable references. i.e. this */
-   /* uses variable parameters instead of value params   */
+   /* version uses variable parameters instead of value parameters   */
 
 #include <stdio.h>
 
@@ -16806,7 +16806,7 @@ out into two new ones.
 
 struct BinaryTree 
    @{
-   /* other info */
+   /* other information */
 
    struct BinaryTree *left;
    struct BinaryTree *right;
@@ -17507,7 +17507,7 @@ by toolkit routines and by special functions such as @code{over()}.
 
 #define TRUE        1
 #define FALSE       0
-#define GRPS        20   /* No grps which can be handled */
+#define GRPS        20   /* Number of groups which can be handled */
 #define CAREFULLY   1
 #define FAST        0
 #define NOTZERO     1
@@ -17643,7 +17643,7 @@ while (TRUE)
 
 /************************************************************/
 
-noofgroups ()                 /* Check no. of data groups */
+noofgroups ()                 /* Check number of data groups */
 
 @{ char ch,getkey();
 
@@ -17713,7 +17713,7 @@ getkey();
 
 /************************************************************/
 
-quit ()                           /* Quit program & tidy */
+quit ()                           /* Quit program and tidy */
 
 @{ short i;
   struct list *deletetoend();
@@ -17767,7 +17767,7 @@ return;
 
 /************************************************************/
 
-loadproject ()             /* Load new list & delete old */
+loadproject ()             /* Load new list and delete old */
 
 @{ FILE *dfx;
   char *filename(),ch,getkey();
@@ -17934,7 +17934,7 @@ return (sum/num);
 
 /**************************************************************/
 
-stddevs (mean,i)            /* find variance/std deviation */
+stddevs (mean,i)            /* find variance and standard deviation */
 
 double mean;
 int i;
@@ -17953,12 +17953,12 @@ for (ptr = Data[i].datptr; ptr != NULL; ptr=ptr->succ)
 var = sum/num;                          /* "biased" value */
 
 printf ("Variance %d = %f\n",i,var);
-printf ("Std deviation %d = %f\n",i,sqrt(var));
+printf ("Standard deviation %d = %f\n",i,sqrt(var));
 @}
 
 /************************************************************/
 
-double millikan (i)   /* smallest diffnce between 2 data */
+double millikan (i)   /* smallest difference between 2 data */
 
 int i;
 
@@ -18020,7 +18020,7 @@ return (p);
 
 /*************************************************************/
 
-struct list *startfrom (ctr,i)   /* Find kth node in list */
+struct list *startfrom (ctr,i)   /* Find k-th node in list */
 
 int *ctr,i;
 
@@ -18292,16 +18292,16 @@ operation of the program.
   16    #define MAXIDSIZE   32
   17    #define WORDTABLE    33
   18 
-  19    int   LINECOUNT = 1;     /* Contains line no. in file */
-  20    char  BUFFER[MAXIDSIZE]; /* Input BUFFER for IDs      */
+  19    int   LINECOUNT = 1;     /* Contains line number in file */
+  20    char  BUFFER[MAXIDSIZE]; /* Input BUFFER for identifiers */
   21    char  CH;                /* Current input character   */
-  22    char  SPECIALCHAR;       /* macro/pointer flag        */
+  22    char  SPECIALCHAR;       /* macro or pointer flag        */
   23 
   24 /**********************************************************/
   25 /* TABLE                                                  */
   26 /**********************************************************/
   27 
-  28    char *WORDTABLE [WORDTABLE] =   /* Table of resvd words */
+  28    char *WORDTABLE [WORDTABLE] =   /* Table of reserved words */
   29 
   30       @{
   31       "auto"    ,
@@ -18419,7 +18419,7 @@ operation of the program.
  143 
  144 /**********************************************************/
  145 
- 146    RecordWord (fp)  /* get ID in buffer & tube it to data */
+ 146    RecordWord (fp)  /* get identifier  in buffer and tube it to data */
  147 
  148    FILE *fp;
  149 
@@ -18427,7 +18427,7 @@ operation of the program.
  151 
  152    CopyNextID (fp);
  153 
- 154    if ((tok = token()) == 0)       /* if not resved word */
+ 154    if ((tok = token()) == 0)       /* if not reserved word */
  155       @{
  156       RecordUserID(isfunction(fp));
  157       @}
@@ -18551,7 +18551,7 @@ operation of the program.
  275 
  276 /**********************************************************/
  277 
- 278    token ()                    /* Token: pos in WORDTABLE */
+ 278    token ()                    /* Token: position in WORDTABLE */
  279 
  280    @{ int i;
  281 
@@ -18567,7 +18567,7 @@ operation of the program.
  291 
  292 /*********************************************************/
  293 
- 294    RecordUserID (fnflag) /* check ID type & install data */
+ 294    RecordUserID (fnflag) /* check identifier type and install data */
  295 
  296    int fnflag;
  297 
@@ -18587,7 +18587,7 @@ operation of the program.
  311 
  312 /**********************************************************/
  313 
- 314    isfunction (fp)          /* returns TRUE if ID is a fn */
+ 314    isfunction (fp)          /* returns TRUE if identifier is a function */
  315 
  316    FILE *fp;
  317 
@@ -18635,7 +18635,7 @@ operation of the program.
  359 /** LEVEL 3                                              **/
  360 /**********************************************************/
  361 
- 362    skipcomment (fp)         /* skip to char after comment */
+ 362    skipcomment (fp)         /* skip to character after comment */
  363 
  364    FILE *fp;
  365 
@@ -18659,7 +18659,7 @@ operation of the program.
  383 
  384 /*********************************************************/
  385 
- 386    skiptochar (fp,ch)           /* skip to char after ch */
+ 386    skiptochar (fp,ch)           /* skip to character after ch */
  387 
  388    FILE *fp;
  389    char ch;
@@ -18681,7 +18681,7 @@ operation of the program.
  405 
  406 /*********************************************************/
  407 
- 408    struct BinaryTree *install (p)  /* install ID in tree */
+ 408    struct BinaryTree *install (p)  /* install identifier in tree */
  409 
  410    struct BinaryTree *p;
  411 
@@ -18722,7 +18722,7 @@ operation of the program.
  446 /* LEVEL 4                                               */
  447 /*********************************************************/
  448 
- 449    struct heap *pushonheap (h)  /* push nxt ln no.to heap */
+ 449    struct heap *pushonheap (h)  /* push next line number to heap */
  450 
  451    struct heap *h;
  452 
@@ -18783,7 +18783,7 @@ operation of the program.
  507 /* TOOLKIT data structure                                 */
  508 /**********************************************************/
  509 
- 510    char *stringin (array)    /* cpy str in arry to ptr loc*/
+ 510    char *stringin (array)    /* copy string in array to pointer location */
  511 
  512    char *array;
  513 
@@ -20506,12 +20506,12 @@ how the main words and symbols of the three languages relate.
    do                    N/A                 N/A
      @{
      @}
-   while (..);
+   while (...);
 
    N/A                   repeat              REPEAT
                          until (..)          UNTIL ..
 
-   if (..) ..;           if ... then ...     IF .. THEN..
+   if (...) ...;           if ... then ...     IF ... THEN ...
    else ...;             else ....;          ELSE
 
    switch (..)           case .. of          N/A
@@ -20519,7 +20519,7 @@ how the main words and symbols of the three languages relate.
      case : 
      @}                     end;
 
-  /* .... */          @{ ..... @}           REM .....
+  /* ... */          @{ ... @}           REM ...
 
       *                   ^                ? ! $
 
